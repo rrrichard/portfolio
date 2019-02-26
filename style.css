@@ -28,28 +28,37 @@ header{
 
 }
 
+header li a{
+    color: #565254;
+}
+
+
 .navBar{
-    width:100%;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+
 }
 
 .navBar ul {
     list-style: none;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .navBar li{
+    display: inline-block;
     font-size: 20px;
-}
-
-.navBar li a{
-    float:right;
-    text-decoration: none;
     padding: 10px;
     margin: 10px;
     border: 2px solid transparent;
 }
+
+.navBar li a{
+    text-decoration: none;
+    padding: 10px;
+}
+
+
 
 .navBar a:hover{
     border: 2px solid #D0CFCF;
@@ -60,23 +69,16 @@ header{
     color: #565254;
 }
 
-
-
 /*FEATURE PAGE*/
-
-
-
 
 .featureImage {
     text-align: center;
-     /*this is for desktop height:100vh;*/
-    height:1100px;
+    height: 1100px;
     background-image: url(images/featureimage.jpg);
     background-size: cover;
     background-position: center;
     margin-top: -225px;
 }
-
 
 .featureImage h1{
     letter-spacing: 25px;
@@ -84,8 +86,7 @@ header{
     font-size: 64px;
     padding-top: 300px;
     margin-bottom: 30px;
-    /*text-shadow: 2px 2px #FFFFFF;*/
-    color:#565254;
+    color: #565254;
     font-family: Verdana, Geneva, sans-serif;
     font-weight: lighter;
 }
@@ -93,7 +94,7 @@ header{
 .featureImage p{
     letter-spacing: 18px;
     font-size: 40px;
-    color:#FFFBFE;
+    color: #FFFBFE;
     font-family: Verdana, Geneva, sans-serif;
     font-weight: lighter;
     text-align: center;
@@ -107,7 +108,7 @@ header{
 
 .featureImage a{
     text-decoration: none;
-    font-size:18px;
+    font-size: 18px;
     letter-spacing: 5px;
     margin: 5px 10px;
 }
@@ -128,9 +129,9 @@ header{
 }
 
 .archBox{
-    width:33.3%;
-    height:250px;
-    float:left;
+    width: 33.3%;
+    height: 250px;
+    float: left;
     border: 1px solid black;
 }
 
@@ -138,10 +139,6 @@ header{
 
 .portfolio {
     color: #000000;
-}
-
-.portfolio h2{
-
 }
 
 .portfolio h3{
@@ -154,10 +151,10 @@ header{
 
 .projectBox{
     text-align: center;
-    width:33.3%;
-    height:330px;
+    width: 33.3%;
+    height: 330px;
     border: 1px solid black;
-    float:left;
+    float: left;
 
 }
 
@@ -168,9 +165,8 @@ header{
 }
 
 .boxes{
-    overflow:auto;
+    overflow: auto;
 }
-
 
 /*ARCHWORKS*/
 
@@ -183,7 +179,6 @@ header{
 footer{
     text-align: center;
     background-color: #272727;
-    /*height: 30vh;*/
     width: 100%;
 }
 
@@ -191,10 +186,9 @@ footer button{
     border: 2px solid #14a76c;
     margin-bottom: 20px;
     padding: 10px;
-    background-color:transparent;
+    background-color: transparent;
     color: #14a76c;
-    font-size:18px;
-
+    font-size: 18px;
 }
 
 footer .contact{
@@ -205,7 +199,6 @@ footer .contact{
 
 footer a{
     text-decoration: none;
-
 }
 
 footer a:visited{
@@ -222,20 +215,17 @@ footer a:visited{
 
 @media only screen and (max-width:500px) {
     .boxes .projectBox{
-        width:100%;
-        height:300px;
+        width: 100%;
+        height: 300px;
     }
 }
 
 
 @media only screen and (max-width:768px) {
-
-
-
     .navBar li a{
-        font-size:16px;
-        margin:0;
-        padding:10px;
+        font-size: 16px;
+        margin: 0;
+        padding: 10px;
     }
 
     .navbar ul{
@@ -255,9 +245,8 @@ footer a:visited{
 }
 
 @media only screen and (max-width:1024px) {
-
     .projectBox{
-        width:50%;
-        height:280px;
+        width: 50%;
+        height: 280px;
     }
 }
