@@ -27,7 +27,6 @@ header{
 }
 
 .navBar{
-    background-color:#fffaf7;
     width:100%;
     margin: 0;
     padding: 0;
@@ -62,6 +61,10 @@ header{
 
 
 /*FEATURE PAGE*/
+
+
+
+
 .featureImage {
     text-align: center;
      /*this is for desktop height:100vh;*/
@@ -72,6 +75,7 @@ header{
     margin-top: -200px;
 }
 
+
 .featureImage h1{
     letter-spacing: 3px;
     line-height: 5rem;
@@ -79,11 +83,14 @@ header{
     padding-top: 300px;
     margin-bottom: 30px;
     /*text-shadow: 2px 2px #FFFFFF;*/
-    opacity: 1;
-    margin-top: 0px;
     color:#565254;
+    position: absolute;
+    right:5%;
 }
 
+.featureImage p{
+
+}
 /*ABOUT ME*/
 
 .aboutMe{
@@ -178,3 +185,6 @@ footer a{
 footer a:visited{
     color: #14a76c;
 }
+
+@media only screen
+    and (min)
