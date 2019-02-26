@@ -150,7 +150,7 @@ header{
     padding: 0 30px;
 }
 
-.portfolio .projectBox{
+.projectBox{
     text-align: center;
     width:33.3%;
     height:400px;
@@ -209,11 +209,37 @@ footer a:visited{
     color: #14a76c;
 }
 
-@media only screen
-    and (min-device-width:1024px)
-    and (max-device-width:1500px){
+/*@media only screen and (min-width:768px) {*/
 
-    .portfolio .projectBox{
-        height:600px;
+    /*.container {*/
+        /*background-color: red;*/
+    /*}*/
+
+/*}*/
+
+@media only screen and (max-width:768px) {
+
+    .boxes .projectBox{
+        width:100%;
+        height:300px;
+    }
+
+    .navBar li a{
+        font-size:16px;
+        margin:0;
+
+    }
+
+    .navbar ul{
+        margin-right: 20%;
+    }
+
+}
+
+@media only screen and (max-width:1024px) {
+
+    .projectBox{
+        width:50%;
+        height:300px;
     }
 }
