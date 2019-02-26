@@ -5,6 +5,8 @@
 body{
     font-family: Helvetica, Arial, sans-serif;
     line-height: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -20,82 +22,91 @@ body{
 
 header{
     height: 150px;
-    background: #000000;
-    color: #ffffff;
+    color: #000000;
 
 }
 
-.navBar img{
-    height: 128px;
-    width: auto;
-    opacity: 0.3;
+.navBar{
+    background-color:#fffaf7;
+    width:100%;
+    margin: 0;
+    padding: 0;
 }
 
-.navBar ul{
+.navBar ul {
     list-style: none;
-    display: inline;
-    /* this is for desktop float: right;*/
     text-align: center;
 }
 
 .navBar li{
-    /* this is for desktop float: left;*/
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .navBar li a{
+    float:right;
     text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid transparent;
+}
+
+.navBar a:hover{
+    border: 2px solid #D0CFCF;
+    color: #D0CFCF;
 }
 
 .navBar li a:visited{
-    color: white;
+    color: #565254;
 }
 
-.navBar{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
 
 
 /*FEATURE PAGE*/
 .featureImage {
-    color: white;
     text-align: center;
-    /* this is for desktop height:100vh;*/
-    height:800px;
-    /*background: url("https://images.pexels.com/photos/19068/mirror-light-black-glass.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat 0 0;*/
-    background-image: url("https://images.pexels.com/photos/19068/mirror-light-black-glass.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+     /*this is for desktop height:100vh;*/
+    height:100vh;
+    background-image: url(images/featureimage.jpg);
     background-size: cover;
     background-position: center;
-    margin-top: -150px;
+    margin-top: -200px;
 }
 
 .featureImage h1{
     letter-spacing: 3px;
     line-height: 5rem;
     font-size: 64px;
-    padding-top: 250px;
+    padding-top: 300px;
     margin-bottom: 30px;
-}
-
-.featureImage p{
-    letter-spacing: 4px;
-    line-height: 2rem;
-    font-size: 30px;
+    /*text-shadow: 2px 2px #FFFFFF;*/
+    opacity: 1;
+    margin-top: 0px;
+    color:#565254;
 }
 
 /*PORTFOLIO SECTION*/
 
+.portfolio {
+    color: white;
+}
+
+.portfolio h2{
+
+}
+
 .portfolio h3{
     text-align: center;
+}
+
+.portfolio p{
+    padding: 0 30px;
 }
 
 .portfolio .projectBox{
     text-align: center;
     width:100%;
     height:400px;
+    padding-top: 20%;
 }
 
 .project1{
@@ -103,3 +114,4 @@ header{
     background-size: cover;
     background-position: center;
 }
+
