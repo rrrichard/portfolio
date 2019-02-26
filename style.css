@@ -72,25 +72,48 @@ header{
     background-image: url(images/featureimage.jpg);
     background-size: cover;
     background-position: center;
-    margin-top: -200px;
+    margin-top: -225px;
 }
 
 
 .featureImage h1{
-    letter-spacing: 3px;
+    letter-spacing: 25px;
     line-height: 5rem;
     font-size: 64px;
     padding-top: 300px;
     margin-bottom: 30px;
     /*text-shadow: 2px 2px #FFFFFF;*/
     color:#565254;
-    position: absolute;
-    right:5%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: lighter;
 }
 
 .featureImage p{
-
+    letter-spacing: 18px;
+    font-size: 40px;
+    color:#FFFBFE;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: lighter;
+    text-align: center;
 }
+
+.featureImage button{
+    background-color: transparent;
+    border: 2px solid #FFFBFE;
+    text-align: center;
+}
+
+.featureImage a{
+    text-decoration: none;
+    font-size:18px;
+    letter-spacing: 5px;
+    margin: 5px 10px;
+}
+
+.featureImage a:visited{
+    color: #FFFBFE;
+}
+
 /*ABOUT ME*/
 
 .aboutMe{
@@ -187,4 +210,10 @@ footer a:visited{
 }
 
 @media only screen
-    and (min)
+    and (min-device-width:1024px)
+    and (max-device-width:1500px){
+
+    .portfolio .projectBox{
+        height:600px;
+    }
+}
