@@ -65,7 +65,7 @@ header{
 .featureImage {
     text-align: center;
      /*this is for desktop height:100vh;*/
-    height:100vh;
+    height:1100px;
     background-image: url(images/featureimage.jpg);
     background-size: cover;
     background-position: center;
@@ -84,10 +84,28 @@ header{
     color:#565254;
 }
 
+/*ABOUT ME*/
+
+.aboutMe{
+    text-align: center;
+    overflow: auto;
+}
+
+.aboutMe .archWorks{
+    font-size: 24px;
+}
+
+.archBox{
+    width:33.3%;
+    height:250px;
+    float:left;
+    border: 1px solid black;
+}
+
 /*PORTFOLIO SECTION*/
 
 .portfolio {
-    color: white;
+    color: #000000;
 }
 
 .portfolio h2{
@@ -106,7 +124,6 @@ header{
     text-align: center;
     width:33.3%;
     height:400px;
-    padding-top: 20%;
     border: 1px solid black;
     float:left;
 
@@ -118,7 +135,17 @@ header{
     background-position: center;
 }
 
+.boxes{
+    overflow:auto;
+}
 
+
+/*ARCHWORKS*/
+
+.archWorks{
+    overflow: auto;
+    text-align: center;
+}
 /*CONTACT ME*/
 
 footer{
@@ -142,4 +169,12 @@ footer .contact{
     padding-top: 20px;
     text-align: center;
     color: #747474;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer a:visited{
+    color: #14a76c;
 }
