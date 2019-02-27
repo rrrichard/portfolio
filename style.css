@@ -9,6 +9,13 @@ body{
     padding: 0;
 }
 
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0px;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -122,28 +129,12 @@ header li a{
     color: #FFFBFE;
 }
 
-/*ABOUT ME*/
-
-.aboutMe{
-    text-align: center;
-    overflow: auto;
-}
-
-.aboutMe .archWorks{
-    font-size: 24px;
-}
-
-.archBox{
-    width: 33.3%;
-    height: 250px;
-    float: left;
-    border: 1px solid black;
-}
 
 /*PORTFOLIO SECTION*/
 
 .portfolio {
     color: #000000;
+    display:block;
 }
 
 .portfolio h3{
@@ -172,6 +163,89 @@ header li a{
 .boxes{
     overflow: auto;
 }
+
+/*ABOUT ME*/
+
+.aboutMe{
+    text-align: center;
+    overflow: auto;
+}
+
+.aboutMe .archWorks{
+    font-size: 24px;
+}
+
+.archBox{
+    width: 33.3%;
+    height: 250px;
+    float: left;
+    border: 1px solid black;
+}
+
+/*SLIDER ATTEMPT 2*/
+
+@keyframes slider {
+
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
+
+}
+
+.slider {
+    overflow: hidden;
+    height: 600px;
+}
+
+.slider figure img {
+    width: 20%;
+    float: left;
+    vertical-align: middle;
+}
+
+.slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 20s slider infinite;
+
+}
+
 
 /*ARCHWORKS*/
 
