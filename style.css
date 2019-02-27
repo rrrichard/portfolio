@@ -347,6 +347,18 @@ footer a:visited{
         font-size: 28px;
     }
 
+    .projectBox h4{
+        font-size: 32px;
+        letter-spacing: 3px;
+        margin-top: 40%;
+    }
+
+    .projectBox p{
+        font-size: 18px;
+        font-weight: normal;
+        margin-top: 10px;
+    }
+
     .copyright{
 
         float: none;
@@ -366,5 +378,9 @@ footer a:visited{
     .projectBox{
         width: 50%;
         height: 280px;
+    }
+
+    .projectBox h4{
+        margin-bottom: 0px;
     }
 }
