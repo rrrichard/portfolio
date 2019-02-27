@@ -19,6 +19,10 @@ html{
     margin: 0 auto;
 }
 
+.invert{
+    filter: invert(100%);
+}
+
 /*HEADER*/
 
 
@@ -193,9 +197,10 @@ footer button{
 }
 
 footer .contact{
-    padding-top: 20px;
+    padding-top: 5px;
     text-align: center;
     color: #747474;
+    margin: 0px;
 }
 
 footer a{
@@ -207,6 +212,26 @@ footer a:visited{
     color: #14a76c;
 }
 
+.logoContainer a img{
+    height:50px;
+    width:auto;
+    opacity: 0.8;
+    margin-left:20px;
+}
+
+.logoContainer{
+    float: right;
+    display: inline-block;
+    margin-top: -70px;
+}
+
+.copyright{
+    color: #FFFFFF;
+    float:left;
+    margin-top: -40px;
+    font-weight: lighter;
+}
+
 /*@media only screen and (min-width:768px) {*/
 
     /*.container {*/
@@ -214,6 +239,10 @@ footer a:visited{
     /*}*/
 
 /*}*/
+
+
+
+/*MEDIA QUERIES*/
 
 @media only screen and (max-width:500px) {
     .boxes .projectBox{
