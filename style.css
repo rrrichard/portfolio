@@ -35,10 +35,6 @@ header li a{
     color: #565254;
 }
 
-.navBar{
-    width: 100%;
-}
-
 .navBar ul {
     list-style: none;
     text-align: center;
@@ -95,8 +91,6 @@ header li a{
     font-size: 40px;
     color: #FFFBFE;
     font-family: Verdana, Geneva, sans-serif;
-    font-weight: lighter;
-    text-align: center;
 }
 
 .featureImage button{
@@ -148,7 +142,6 @@ header li a{
 .projectBox h4{
     font-size: 48px;
     letter-spacing: 5px;
-    font-weight: bold;
     margin-top: 25%;
     color: #FFFFFF;
 }
@@ -246,27 +239,40 @@ footer{
     text-align: center;
     background-color: #272727;
     width: 100%;
+    height: 160px;
 }
 
-footer button{
-    border: 2px solid #14a76c;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: transparent;
-    color: #14a76c;
-    font-size: 18px;
+/*footer button{*/
+    /*border: 2px solid #14a76c;*/
+    /*margin-bottom: 20px;*/
+    /*padding: 10px;*/
+    /*background-color: transparent;*/
+    /*color: #14a76c;*/
+    /*font-size: 18px;*/
+/*}*/
+footer h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
+
+footer p{
+    margin: 10px;
+}
+
 
 footer .contact{
     padding-top: 5px;
-    text-align: center;
     color: #747474;
-    margin: 0px;
 }
 
 footer a{
     text-decoration: none;
     color: #14a76c;
+}
+footer .backUp{
+    padding: 5px 20px;
+    border: 2px solid #14a76c;
+    font-size: 16px;
 }
 
 footer a:visited{
@@ -275,7 +281,6 @@ footer a:visited{
 
 .logoContainer a img{
     height: 50px;
-    width: auto;
     opacity: 0.8;
     margin-left: 20px;
 }
@@ -283,13 +288,13 @@ footer a:visited{
 .logoContainer{
     float: right;
     display: inline-block;
-    margin-top: -70px;
+    margin-top: -45px;
 }
 
 .copyright{
     color: #FFFFFF;
     float: left;
-    margin-top: -40px;
+    margin-top: -15px;
     font-weight: lighter;
     opacity: 0.8;
 }
@@ -359,17 +364,17 @@ footer a:visited{
         margin-top: 10px;
     }
 
-    .copyright{
+    /*.copyright{*/
 
-        float: none;
-        margin-top: 10px;
-    }
+        /*float: none;*/
+        /*margin-top: 10px;*/
+    /*}*/
 
-    .logoContainer{
-        display: block;
-        float: none;
-        margin-top: 5px;
-    }
+    /*.logoContainer{*/
+        /*display: block;*/
+        /*float: none;*/
+        /*margin-top: 5px;*/
+    /*}*/
     footer{
         height: 300px}
 }
@@ -382,5 +387,20 @@ footer a:visited{
 
     .projectBox h4{
         margin-bottom: 0px;
+    }
+
+    footer{
+        height: 260px;
+    }
+
+    .copyright{
+        float: none;
+        margin-top: 10px;
+    }
+
+    .logoContainer{
+        display: block;
+        float: none;
+        margin-top: 20px;
     }
 }
