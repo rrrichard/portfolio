@@ -230,6 +230,7 @@ footer a:visited{
     float:left;
     margin-top: -40px;
     font-weight: lighter;
+    opacity: 0.8;
 }
 
 /*@media only screen and (min-width:768px) {*/
