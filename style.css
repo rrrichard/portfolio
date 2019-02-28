@@ -141,7 +141,7 @@ header li a{
 .projectBox h4{
     font-size: 48px;
     letter-spacing: 5px;
-    margin-top: 25%;
+    padding-top: 5%;
     color: #FFFFFF;
     display: none;
 }
@@ -149,10 +149,10 @@ header li a{
 .projectBox h3{
     font-size: 48px;
     letter-spacing: 5px;
-    margin-top: 25%;
     color: #FFFFFF;
     display: none;
     font-weight: bold;
+    padding-top: 15%;
 }
 
 .projectBox P{
@@ -185,7 +185,7 @@ header li a{
 }
 
 .projectBox .projectDone h4{
-    margin-top: 50%;
+    margin-top: 35%;
 }
 .project1{
     background-image: url(images/pilotshop.png);
@@ -231,6 +231,7 @@ header li a{
 .aboutMe{
     text-align: center;
     overflow: auto;
+    margin-bottom: 50px;
 }
 
 .aboutMe h2{
@@ -264,6 +265,7 @@ footer{
     background-color: #272727;
     width: 100%;
     height: 160px;
+    color: #747474
 }
 
 footer h2{
@@ -276,7 +278,6 @@ footer p{
 
 footer .contact{
     padding-top: 5px;
-    color: #747474;
 }
 
 footer a{
@@ -290,12 +291,20 @@ footer .backUp{
     font-size: 16px;
 }
 
+.backUp a{
+    color: #747474;
+}
+
 footer .backUp:hover{
-    border: 1px solid #FFFFFF;
+    border: 1px solid #747474;
 }
 
 footer a:visited{
-    color: #FFFFFF;
+    color: #747474;
+}
+
+.contact a{
+    color: #747474;
 }
 
 .logoContainer a img{
@@ -311,7 +320,7 @@ footer a:visited{
 }
 
 .copyright{
-    color: #FFFFFF;
+    color: #747474;
     float: left;
     margin-top: -15px;
     font-weight: lighter;
@@ -337,7 +346,7 @@ footer a:visited{
     }
 
     .portfolio .projectBox h3{
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     .projectBox P{
@@ -386,13 +395,13 @@ footer a:visited{
     .projectBox h3{
         font-size: 32px;
         letter-spacing: 3px;
-        margin-top: 30%;
+        margin-top: 20%;
     }
 
     .projectBox h4{
         font-size: 32px;
         letter-spacing: 3px;
-        margin-top: 30%;
+        margin-top: 20%;
     }
 
     .projectBox p{
