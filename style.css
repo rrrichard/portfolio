@@ -4,9 +4,6 @@
 
 body{
     font-family: Helvetica, Arial, sans-serif;
-    /*line-height: 20px;*/
-    margin: 0;
-    padding: 0;
 }
 
 html{
@@ -20,10 +17,6 @@ html{
     margin: 0 auto;
 }
 
-.invert{
-    filter: invert(100%);
-}
-
 /*HEADER*/
 
 header{
@@ -35,7 +28,6 @@ header li a{
 }
 
 .navBar ul {
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -91,7 +83,6 @@ header li a{
 
 .featureImage a{
     text-decoration: none;
-    font-size: 16px;
     letter-spacing: 5px;
     margin: 5px 10px;
     padding: 5px 10px 5px 15px;
@@ -113,7 +104,6 @@ header li a{
 
 .portfolio {
     color: #000000;
-    display: block;
 }
 
 .portfolio h3{
@@ -263,7 +253,6 @@ header li a{
 footer{
     text-align: center;
     background-color: #272727;
-    width: 100%;
     height: 160px;
     color: #747474
 }
@@ -282,7 +271,6 @@ footer .contact{
 
 footer a{
     text-decoration: none;
-    color: #FFFFFF;
     opacity: 0.8;
 }
 footer .backUp{
@@ -311,11 +299,11 @@ footer a:visited{
     height: 50px;
     opacity: 0.8;
     margin-left: 20px;
+    filter: invert(100%);
 }
 
 .logoContainer{
     float: right;
-    display: inline-block;
     margin-top: -45px;
 }
 
@@ -327,7 +315,7 @@ footer a:visited{
     opacity: 0.8;
 }
 
-/*MEDIA QUERIES*/
+/*!*MEDIA QUERIES*! MARK*/
 
 @media only screen and (max-width:500px) {
     .boxes .projectBox{
@@ -358,7 +346,8 @@ footer a:visited{
     }
 
    footer{
-       height: 300px}
+       height: 300px
+   }
 }
 
 @media only screen and (max-width:768px) {
