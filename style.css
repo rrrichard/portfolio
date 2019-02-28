@@ -454,7 +454,7 @@ footer a:visited{
 
     .projectBox:hover{
         opacity: 1;
-        transform: scale(1.1);
+        transform: scale(0.9);
     }
     .projectBox:hover h3{
         display: block;
