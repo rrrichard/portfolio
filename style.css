@@ -1,61 +1,61 @@
-*{
+* {
     box-sizing: border-box
 }
 
-body{
+body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 /*GLOBAL*/
 
-.container{
+.container {
     width: 90%;
     margin: 0 auto;
 }
 
 /*HEADER*/
 
-header{
+header {
     height: 150px;
 }
 
-header li a{
+header li a {
     color: #565254;
 }
 
-.navBar ul {
+.navBar ul  {
     margin: 0;
     padding: 0;
 }
 
-.navBar li{
+.navBar li {
     display: inline-block;
     padding: 10px;
     margin: 10px;
     border: 2px solid transparent;
 }
-.narBar .more{
+.narBar .more {
     border: 2px solid black;
 }
 
-.navBar li:hover{
+.navBar li:hover {
     border: 2px solid #565254;
 }
 
-.navBar li a:visited{
+.navBar li a:visited {
     color: #565254;
 }
 
-.navBar .navHidden{
+.navBar .navHidden {
     display: none;
 }
 /*FEATURE PAGE*/
 
-.featureImage {
+.featureImage  {
     text-align: center;
     height: 1100px;
     background-image: url(images/featureimage.jpg);
@@ -63,7 +63,7 @@ header li a{
     background-position: center;
 }
 
-.featureImage h1{
+.featureImage h1 {
     letter-spacing: 25px;
     line-height: 5rem;
     font-size: 64px;
@@ -74,21 +74,21 @@ header li a{
     font-weight: lighter;
 }
 
-.featureImage p{
+.featureImage p {
     letter-spacing: 18px;
     font-size: 40px;
     color: #FFFBFE;
     font-family: Verdana, Geneva, sans-serif;
 }
 
-.featureImage a{
+.featureImage a {
     text-decoration: none;
     letter-spacing: 5px;
     margin: 5px 10px;
     padding: 5px 10px 5px 15px;
 }
 
-.featureImage .more{
+.featureImage .more {
     color: #FFFBFE;
 }
 
@@ -96,7 +96,7 @@ header li a{
     border: 2px solid #FFFBFE;
 }
 
-.featureImage a:visited{
+.featureImage a:visited {
     color: #FFFBFE;
 }
 
@@ -104,9 +104,10 @@ header li a{
 
 .portfolio {
     color: #000000;
+    overflow: auto;
 }
 
-.portfolio h3{
+.portfolio h3 {
     text-align: center;
     letter-spacing: 6px;
     font-size: 48px;
@@ -114,11 +115,11 @@ header li a{
     font-weight: normal;
 }
 
-.portfolio p{
+.portfolio p {
     padding: 0 30px;
 }
 
-.projectBox{
+.projectBox {
     text-align: center;
     width: 33.3%;
     height: 330px;
@@ -128,7 +129,7 @@ header li a{
     transition: all 0.3s;
 }
 
-.projectBox h4{
+.projectBox h4 {
     font-size: 48px;
     letter-spacing: 5px;
     padding-top: 5%;
@@ -136,7 +137,7 @@ header li a{
     display: none;
 }
 
-.projectBox h3{
+.projectBox h3 {
     font-size: 48px;
     letter-spacing: 5px;
     color: #FFFFFF;
@@ -145,7 +146,7 @@ header li a{
     padding-top: 15%;
 }
 
-.projectBox P{
+.projectBox P {
     font-size: 24px;
     letter-spacing: 2px;
     font-weight: bold;
@@ -153,95 +154,91 @@ header li a{
     display: none;
 }
 
-.projectBox:hover{
+.projectBox:hover {
     opacity: 1;
     transform: scale(0.9);
 }
-.projectBox:hover h3{
+.projectBox:hover h3 {
     display: block;
 }
 
-.projectBox:hover h4{
+.projectBox:hover h4 {
     display: block;
 }
 
-.projectBox:hover p{
+.projectBox:hover p {
     display: block;
 }
 
-.projectBox a:visited{
+.projectBox a:visited {
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.projectBox .projectDone h4{
+.projectBox .projectDone h4 {
     margin-top: 35%;
 }
-.project1{
+.project1 {
     background-image: url(images/pilotshop.png);
     background-size: cover;
     background-position: center;
 }
 
-.project2{
+.project2 {
     background-image: url(images/maydenlogo.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.project3{
+.project3 {
     background-image: url(images/workprogress1.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.project4{
+.project4 {
     background-image: url(images/workprogress2.jpg);
     background-size: cover;
     background-position: center;
 }
-.project5{
+.project5 {
     background-image: url(images/workprogress3.jpg);
     background-size: cover;
     background-position: center;
 }
-.project6{
+.project6 {
     background-image: url(images/workprogress4.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.boxes{
-    overflow: auto;
-}
-
 /*ABOUT ME*/
 
-.aboutMe{
+.aboutMe {
     text-align: center;
     overflow: auto;
     margin-bottom: 50px;
 }
 
-.aboutMe h2{
+.aboutMe h2 {
     font-size: 48px;
     color: #565254;
     font-weight: normal;
     letter-spacing: 6px;
 }
 
-.aboutMe p{
+.aboutMe p {
     letter-spacing: 2px;
     line-height: 18px;
     color: #565254;
 }
 
-.aboutMe .archWorks{
+.aboutMe .archWorks {
     font-size: 24px;
 }
 
-.archBox{
+.archBox {
     width: 33.3%;
     height: 250px;
     float: left;
@@ -250,64 +247,64 @@ header li a{
 
 /*CONTACT ME*/
 
-footer{
+footer {
     text-align: center;
     background-color: #272727;
     height: 160px;
     color: #747474
 }
 
-footer h2{
+footer h2 {
     margin-bottom: 10px;
 }
 
-footer p{
+footer p {
     margin: 10px;
 }
 
-footer .contact{
+footer .contact {
     padding-top: 5px;
 }
 
-footer a{
+footer a {
     text-decoration: none;
     opacity: 0.8;
 }
-footer .backUp{
+footer .backUp {
     padding: 5px 15px;
     border: 1px solid transparent;
     font-size: 16px;
 }
 
-.backUp a{
+.backUp a {
     color: #747474;
 }
 
-footer .backUp:hover{
+footer .backUp:hover {
     border: 1px solid #747474;
 }
 
-footer a:visited{
+footer a:visited {
     color: #747474;
 }
 
-.contact a{
+.contact a {
     color: #747474;
 }
 
-.logoContainer a img{
+.logoContainer a img {
     height: 50px;
     opacity: 0.8;
     margin-left: 20px;
     filter: invert(100%);
 }
 
-.logoContainer{
+.logoContainer {
     float: right;
     margin-top: -45px;
 }
 
-.copyright{
+.copyright {
     color: #747474;
     float: left;
     margin-top: -15px;
@@ -318,26 +315,26 @@ footer a:visited{
 /*!*MEDIA QUERIES*! MARK*/
 
 @media only screen and (max-width:500px) {
-    .boxes .projectBox{
+    .projectBox {
         width: 100%;
         height: 300px;
     }
-    .navBar li{
+    .navBar li {
         font-size: 14px;
         padding: 0;
         margin: 30px 10px;
         border: none;
     }
 
-    .portfolio .projectBox h4{
+    .portfolio .projectBox h4 {
         margin-top: 20%;
     }
 
-    .portfolio .projectBox h3{
+    .portfolio .projectBox h3 {
         margin-top: 10%;
     }
 
-    .projectBox P{
+    .projectBox P {
         font-size: 24px;
         letter-spacing: 2px;
         font-weight: bold;
@@ -345,101 +342,100 @@ footer a:visited{
         display: none;
     }
 
-   footer{
+   footer {
        height: 300px
    }
 }
 
 @media only screen and (max-width:768px) {
-    .navBar li a{
+    .navBar li a {
         font-size: 14px;
         margin: 0 20px;
         padding: 10px;
     }
 
-    .navBar ul{
+    .navBar ul {
         margin: 0;
     }
 
-    .navBar .navDefault{
+    .navBar .navDefault {
         display: none;
     }
-    .navBar .navHidden{
+    .navBar .navHidden {
         display: block;
         padding: 0;
     }
 
-    .featureImage h1{
+    .featureImage h1 {
         letter-spacing: 20px;
         line-height: 3.5rem;
         font-size: 46px;
     }
 
-    .featureImage p{
+    .featureImage p {
         letter-spacing: 12px;
         font-size: 28px;
     }
 
 
-    .projectBox h3{
+    .projectBox h3 {
         font-size: 32px;
         letter-spacing: 3px;
         margin-top: 20%;
     }
 
-    .projectBox h4{
+    .projectBox h4 {
         font-size: 32px;
         letter-spacing: 3px;
         margin-top: 20%;
     }
 
-    .projectBox p{
+    .projectBox p {
         font-size: 18px;
         font-weight: normal;
         margin-top: 10px;
     }
 
-    footer{
+    footer {
         height: 300px}
 }
 
 @media only screen and (max-width:1024px) {
-    .projectBox{
+    .projectBox {
         width: 50%;
         height: 280px;
     }
 
-    .projectBox h4{
+    .projectBox h4 {
         margin-bottom: 0;
     }
 
-    footer{
+    footer {
         height: 260px;
     }
 
-    .copyright{
+    .copyright {
         float: none;
         margin-top: 10px;
     }
 
-    .logoContainer{
+    .logoContainer {
         display: block;
         float: none;
         margin-top: 20px;
     }
 
-    .featureImage h1{
+    .featureImage h1 {
         padding-top: 180px;
     }
 
-    .navBar li{
+    .navBar li {
         font-size: 16px;
         padding: 0;
         margin: 20px 0 0 0;
     }
 
-    .navBar li:hover{
+    .navBar li:hover {
         border: 2px solid #7a7678;
     }
-
 }
