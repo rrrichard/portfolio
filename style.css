@@ -28,7 +28,6 @@ html{
 
 header{
     height: 150px;
-    color: #000000;
 }
 
 header li a{
@@ -49,21 +48,21 @@ header li a{
     margin: 10px;
     border: 2px solid transparent;
 }
-
-.navBar li a{
-    text-decoration: none;
-    padding: 10px;
+.narBar .more{
+    border: 2px solid black;
 }
 
-.navBar a:hover{
-    border: 2px solid #D0CFCF;
-    color: #D0CFCF;
+.navBar li:hover{
+    border: 2px solid #565254;
 }
 
 .navBar li a:visited{
     color: #565254;
 }
 
+.navBar .navHidden{
+    display: none;
+}
 /*FEATURE PAGE*/
 
 .featureImage {
@@ -72,14 +71,13 @@ header li a{
     background-image: url(images/featureimage.jpg);
     background-size: cover;
     background-position: center;
-    margin-top: -225px;
 }
 
 .featureImage h1{
     letter-spacing: 25px;
     line-height: 5rem;
     font-size: 64px;
-    padding-top: 300px;
+    padding-top: 240px;
     margin-bottom: 30px;
     color: #565254;
     font-family: Verdana, Geneva, sans-serif;
@@ -93,18 +91,21 @@ header li a{
     font-family: Verdana, Geneva, sans-serif;
 }
 
-.featureImage button{
-    background-color: transparent;
-    border: 2px solid #FFFBFE;
-    text-align: center;
-}
-
 .featureImage a{
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 5px;
     margin: 5px 10px;
+    padding: 5px 10px 5px 15px;
+}
+
+.featureImage .more{
+    border: 2px solid transparent;
     color: #FFFBFE;
+}
+
+.featureImage .more:hover {
+    border: 2px solid #FFFBFE;
 }
 
 .featureImage a:visited{
@@ -136,8 +137,8 @@ header li a{
     height: 330px;
     float: left;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    /*opacity: 0.5;*/
-    /*transition: all 0.3s;*/
+    opacity: 0.5;
+    transition: all 0.3s;
 }
 
 .projectBox h4{
@@ -145,44 +146,41 @@ header li a{
     letter-spacing: 5px;
     margin-top: 25%;
     color: #FFFFFF;
-    /*display:none;*/
-
+    display: none;
 }
 
 .projectBox h3{
     font-size: 48px;
     letter-spacing: 5px;
-    margin-top: 35%;
+    margin-top: 25%;
     color: #FFFFFF;
-    /*display:none;*/
+    display: none;
     font-weight: bold;
-
 }
-
 
 .projectBox P{
     font-size: 24px;
     letter-spacing: 2px;
     font-weight: bold;
     color: #FFFFFF;
-    /*display:none;*/
+    display: none;
 }
 
-/*.projectBox:hover{*/
-    /*opacity: 1;*/
-    /*transform: scale(1.1);*/
-/*}*/
-/*.projectBox:hover h3{*/
-    /*display: block;*/
-/*}*/
+.projectBox:hover{
+    opacity: 1;
+    transform: scale(0.9);
+}
+.projectBox:hover h3{
+    display: block;
+}
 
-/*.projectBox:hover h4{*/
-    /*display: block;*/
-/*}*/
+.projectBox:hover h4{
+    display: block;
+}
 
-/*.projectBox:hover p{*/
-    /*display: block;*/
-/*}*/
+.projectBox:hover p{
+    display: block;
+}
 
 .projectBox a:visited{
     color: #FFFFFF;
@@ -272,14 +270,6 @@ footer{
     height: 160px;
 }
 
-/*footer button{*/
-    /*border: 2px solid #14a76c;*/
-    /*margin-bottom: 20px;*/
-    /*padding: 10px;*/
-    /*background-color: transparent;*/
-    /*color: #14a76c;*/
-    /*font-size: 18px;*/
-/*}*/
 footer h2{
     margin-top: 20px;
     margin-bottom: 10px;
@@ -288,7 +278,6 @@ footer h2{
 footer p{
     margin: 10px;
 }
-
 
 footer .contact{
     padding-top: 5px;
@@ -302,8 +291,12 @@ footer a{
 }
 footer .backUp{
     padding: 5px 15px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid transparent;
     font-size: 16px;
+}
+
+footer .backUp:hover{
+    border: 1px solid #FFFFFF;
 }
 
 footer a:visited{
@@ -344,14 +337,6 @@ footer a:visited{
         border: none;
     }
 
-    .navBar li a{
-        margin: 10px;
-    }
-
-    .navBar a:hover{
-        border: none;
-    }
-
     .portfolio .projectBox h4{
         margin-top: 20%;
     }
@@ -360,33 +345,34 @@ footer a:visited{
         margin-top: 20%;
     }
 
-
     .projectBox P{
         font-size: 24px;
         letter-spacing: 2px;
         font-weight: bold;
         color: #FFFFFF;
-        display:none;
+        display: none;
     }
 
    footer{
        height: 300px}
 }
 
-
 @media only screen and (max-width:768px) {
     .navBar li a{
         font-size: 14px;
-        margin: 0;
+        margin: 0 20px;
         padding: 10px;
     }
 
     .navBar ul{
-        margin:0;
+        margin: 0;
     }
 
-    .navBar li a{
-        padding: 0px;
+    .navBar .navDefault{
+        display: none;
+    }
+    .navBar .navHidden{
+        display: block;
     }
 
     .featureImage h1{
@@ -419,56 +405,15 @@ footer a:visited{
         margin-top: 10px;
     }
 
-    /*.copyright{*/
-
-        /*float: none;*/
-        /*margin-top: 10px;*/
-    /*}*/
-
-    /*.logoContainer{*/
-        /*display: block;*/
-        /*float: none;*/
-        /*margin-top: 5px;*/
-    /*}*/
     footer{
         height: 300px}
 }
 
 @media only screen and (min-width:768px) {
-    .projectBox{
-        opacity: 0.5;
-        transition: all 0.3s;
-    }
-
-    .projectBox h3{
-        display:none;
-    }
-
-    .projectBox h4{
-        display:none;
-    }
-
-    .projectBox p{
-        display:none;
-    }
-
-    .projectBox:hover{
-        opacity: 1;
-        transform: scale(0.9);
-    }
-    .projectBox:hover h3{
-        display: block;
-    }
-
-    .projectBox:hover h4{
-        display: block;
-    }
-
-    .projectBox:hover p{
-        display: block;
+    .featureImage a{
+        font-size: 16px;
     }
 }
-
 
 @media only screen and (max-width:1024px) {
     .projectBox{
@@ -477,7 +422,7 @@ footer a:visited{
     }
 
     .projectBox h4{
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
     footer{
@@ -494,4 +439,19 @@ footer a:visited{
         float: none;
         margin-top: 20px;
     }
+
+    .featureImage h1{
+        padding-top: 180px;
+    }
+
+    .navBar li{
+        font-size: 16px;
+        padding: 0;
+        margin: 20px 0 0 0;
+    }
+
+    .navBar li:hover{
+        border: 2px solid #7a7678;
+    }
+
 }
