@@ -36,14 +36,12 @@ header li a{
 
 .navBar ul {
     list-style: none;
-    text-align: center;
     margin: 0;
     padding: 0;
 }
 
 .navBar li{
     display: inline-block;
-    font-size: 20px;
     padding: 10px;
     margin: 10px;
     border: 2px solid transparent;
@@ -100,7 +98,6 @@ header li a{
 }
 
 .featureImage .more{
-    border: 2px solid transparent;
     color: #FFFBFE;
 }
 
@@ -246,7 +243,6 @@ header li a{
 .aboutMe p{
     letter-spacing: 2px;
     line-height: 18px;
-    font-size: 16px;
     color: #565254;
 }
 
@@ -271,7 +267,6 @@ footer{
 }
 
 footer h2{
-    margin-top: 20px;
     margin-bottom: 10px;
 }
 
