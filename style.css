@@ -4,7 +4,7 @@
 
 body{
     font-family: Helvetica, Arial, sans-serif;
-    line-height: 20px;
+    /*line-height: 20px;*/
     margin: 0;
     padding: 0;
 }
@@ -91,7 +91,7 @@ header li a{
 
 .featureImage a{
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 5px;
     margin: 5px 10px;
     padding: 5px 10px 5px 15px;
@@ -368,6 +368,7 @@ footer a:visited{
     }
     .navBar .navHidden{
         display: block;
+        padding: 0;
     }
 
     .featureImage h1{
@@ -402,12 +403,6 @@ footer a:visited{
 
     footer{
         height: 300px}
-}
-
-@media only screen and (min-width:768px) {
-    .featureImage a{
-        font-size: 16px;
-    }
 }
 
 @media only screen and (max-width:1024px) {
