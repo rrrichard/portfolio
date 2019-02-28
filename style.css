@@ -136,7 +136,8 @@ header li a{
     height: 330px;
     float: left;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
+    /*transition: all 0.3s;*/
 }
 
 .projectBox h4{
@@ -144,24 +145,53 @@ header li a{
     letter-spacing: 5px;
     margin-top: 25%;
     color: #FFFFFF;
+    /*display:none;*/
+
 }
+
+.projectBox h3{
+    font-size: 48px;
+    letter-spacing: 5px;
+    margin-top: 35%;
+    color: #FFFFFF;
+    /*display:none;*/
+    font-weight: bold;
+
+}
+
 
 .projectBox P{
     font-size: 24px;
     letter-spacing: 2px;
     font-weight: bold;
     color: #FFFFFF;
+    /*display:none;*/
 }
 
-.projectBox:hover{
-    opacity:1;
-}
+/*.projectBox:hover{*/
+    /*opacity: 1;*/
+    /*transform: scale(1.1);*/
+/*}*/
+/*.projectBox:hover h3{*/
+    /*display: block;*/
+/*}*/
+
+/*.projectBox:hover h4{*/
+    /*display: block;*/
+/*}*/
+
+/*.projectBox:hover p{*/
+    /*display: block;*/
+/*}*/
 
 .projectBox a:visited{
     color: #FFFFFF;
     text-decoration: none;
 }
 
+.projectBox .projectDone h4{
+    margin-top: 50%;
+}
 .project1{
     background-image: url(images/pilotshop.png);
     background-size: cover;
@@ -267,16 +297,17 @@ footer .contact{
 
 footer a{
     text-decoration: none;
-    color: #14a76c;
+    color: #FFFFFF;
+    opacity: 0.8;
 }
 footer .backUp{
-    padding: 5px 20px;
-    border: 2px solid #14a76c;
+    padding: 5px 15px;
+    border: 1px solid #FFFFFF;
     font-size: 16px;
 }
 
 footer a:visited{
-    color: #14a76c;
+    color: #FFFFFF;
 }
 
 .logoContainer a img{
@@ -321,6 +352,23 @@ footer a:visited{
         border: none;
     }
 
+    .portfolio .projectBox h4{
+        margin-top: 20%;
+    }
+
+    .portfolio .projectBox h3{
+        margin-top: 20%;
+    }
+
+
+    .projectBox P{
+        font-size: 24px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        color: #FFFFFF;
+        display:none;
+    }
+
    footer{
        height: 300px}
 }
@@ -352,10 +400,17 @@ footer a:visited{
         font-size: 28px;
     }
 
+
+    .projectBox h3{
+        font-size: 32px;
+        letter-spacing: 3px;
+        margin-top: 30%;
+    }
+
     .projectBox h4{
         font-size: 32px;
         letter-spacing: 3px;
-        margin-top: 40%;
+        margin-top: 30%;
     }
 
     .projectBox p{
@@ -378,6 +433,42 @@ footer a:visited{
     footer{
         height: 300px}
 }
+
+@media only screen and (min-width:768px) {
+    .projectBox{
+        opacity: 0.5;
+        transition: all 0.3s;
+    }
+
+    .projectBox h3{
+        display:none;
+    }
+
+    .projectBox h4{
+        display:none;
+    }
+
+    .projectBox p{
+        display:none;
+    }
+
+    .projectBox:hover{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    .projectBox:hover h3{
+        display: block;
+    }
+
+    .projectBox:hover h4{
+        display: block;
+    }
+
+    .projectBox:hover p{
+        display: block;
+    }
+}
+
 
 @media only screen and (max-width:1024px) {
     .projectBox{
