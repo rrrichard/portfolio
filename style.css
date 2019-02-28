@@ -58,7 +58,7 @@ header li a {
 .featureImage  {
     text-align: center;
     height: 1100px;
-    background-image: url(images/featureimage.jpg);
+    background-image: url("images/featureimage.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -179,36 +179,36 @@ header li a {
     margin-top: 35%;
 }
 .project1 {
-    background-image: url(images/pilotshop.png);
+    background-image: url("images/pilotshop.png");
     background-size: cover;
     background-position: center;
 }
 
 .project2 {
-    background-image: url(images/maydenlogo.png);
+    background-image: url("images/maydenlogo.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .project3 {
-    background-image: url(images/workprogress1.jpg);
+    background-image: url("images/workprogress1.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .project4 {
-    background-image: url(images/workprogress2.jpg);
+    background-image: url("images/workprogress2.jpg");
     background-size: cover;
     background-position: center;
 }
 .project5 {
-    background-image: url(images/workprogress3.jpg);
+    background-image: url("images/workprogress3.jpg");
     background-size: cover;
     background-position: center;
 }
 .project6 {
-    background-image: url(images/workprogress4.jpg);
+    background-image: url("images/workprogress4.jpg");
     background-size: cover;
     background-position: center;
 }
