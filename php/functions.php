@@ -1,8 +1,6 @@
 <?php
 
 
-$paragraphs = addAboutMe($db);
-$paragraphResult = addParagraphs($paragraphs);
 
 
 function addAboutMe($db)
