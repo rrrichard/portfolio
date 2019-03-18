@@ -4,9 +4,9 @@
 /**
  * this function selects the paragraphs in the database and fetches all the data
  *
- * @param $db is the variable that connects the php to mysql and allows it 
+ * @param $db string is the variable that connects the php to mysql and allows it to be called in functions
  *
- * @return mixed
+ * @return mixed returns all the data in order of their id
  */
 function addAboutMe($db)
 {
@@ -15,6 +15,14 @@ function addAboutMe($db)
     return $query->fetchAll();
 }
 
+
+/**
+ * this function enables the data to be returned as a <p> string in the website
+ *
+ * @param array $paragraphs calls in the method that contains all the arrays of the paragraphs
+ *
+ * @return string returns each paragraph in the database as a <p> string and enables it to be output in the website
+ */
 function addParagraphs(array $paragraphs) :string {
     if (is_array($paragraphs)) {
 
