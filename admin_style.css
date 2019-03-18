@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mainText{
+    text-align: center;
+    font-size: 24px;
+    height: 100px;
+}
+
+.forms textarea{
+    float: right;
+}
+
+.forms input{
+    float: left;
+    /*margin-top: 50px;*/
+}
+
+.forms p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.formSize {
+    height: 110px;
+    margin: 100px auto;
+}
+
+.formSize select{
+    float:left;
+}
+
+.submit_buttons{
+    margin-top: 70px;
+}
