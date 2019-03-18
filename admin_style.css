@@ -21,11 +21,6 @@ body {
     float: right;
 }
 
-.forms input{
-    float: left;
-    /*margin-top: 50px;*/
-}
-
 .forms p{
     font-size: 20px;
     font-weight: bold;
