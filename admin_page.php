@@ -23,7 +23,7 @@
             <p>Add additional paragraphs</p>
             <form class="formAdd">
                 <textarea rows="6" cols="80" name="add_form"></textarea>
-                <input type="submit">
+                <input type="submit" name="addSubmit">
             </form>
         </div>
         <div class="formSize">
@@ -31,14 +31,14 @@
             <form>
                 <textarea rows="6" cols="80" name="edit_form"></textarea>
                 <h4>Choose which paragraph to edit</h4>
-                <select>
+                <select name="editSelect">
                     <option>paragraph 1</option>
                     <option>paragraph 2</option>
                     <option>paragraph 3</option>
                 </select>
                 <div class="submit_buttons">
-                    <input type="submit" value="Edit Text">
-                    <input type="submit" value="Submit New Text">
+                    <input type="submit" name="textEdit" value="Edit Text">
+                    <input type="submit" name="textSubmit" value="Submit New Text">
                 </div>
             </form>
         </div>
@@ -46,14 +46,14 @@
             <p>Delete paragraph</p>
             <form>
                 <h4>Choose which paragraph to delete</h4>
-                <select>
+                <select name="deleteSelect">
                     <option>paragraph 1</option>
                     <option>paragraph 2</option>
                     <option>paragraph 3</option>
                 </select>
                 <div class="submit_buttons">
-                    <input type="submit" value="Select Paragraph">
-                    <input type="submit" value="Delete Paragraph">
+                    <input type="submit" name="paragraphSelect" value="Select Paragraph">
+                    <input type="submit" name="paragraphDelete" value="Delete Paragraph">
                 </div>
             </form>
         </div>
