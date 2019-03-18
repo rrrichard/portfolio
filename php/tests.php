@@ -25,5 +25,4 @@ class FunctionTest extends Testcase
         $this->expectException(TypeError::class);
         addParagraphs($input);
     }
-
 }
