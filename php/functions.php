@@ -44,9 +44,9 @@ function addParagraphs(array $paragraphs) :string {
  *
  * @param $db PDO calls the database from the db_query because this function requires it
  *
- * @param $addSubmit array inserts the string in the text area to the database and pairing it with an `id` and a `deleted` number
+ * @param $addSubmit string inserts the string in the text area to the database and pairing it with an `id` and a `deleted` number
  */
-function addParagraphToDb ($db, $addSubmit){
+function addParagraphToDb (PDO $db, string $addSubmit) : void{
     $query = $db->prepare("INSERT INTO `about_me` (`paragraph`) VALUES (:newParagraph);");
     $query->bindParam(':newParagraph', $addSubmit);
     $query->execute();
