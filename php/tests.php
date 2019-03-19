@@ -20,9 +20,26 @@ class FunctionTest extends Testcase
         $this->assertEquals($expected,$case);
     }
 
-    public function testAddParagraphsMalformed(){
+    public function testAddParagraphsFailure2(){
+        $expected = '';
+        $input = [['paragraph' => []]];
+        $case = addParagraphs($input);
+        $this->assertEquals($expected, $case);
+    }
+
+    public function testAddParagraphsFailure3(){
+        $expected = '';
+        $input = [['awesome' => []]];
+        $case = addParagraphs($input);
+        $this->assertEquals($expected, $case);
+    }
+
+
+    public function testAddParagraphsMalformed()
+    {
         $input = 3;
         $this->expectException(TypeError::class);
         addParagraphs($input);
     }
+
 }
