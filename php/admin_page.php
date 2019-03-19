@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Secured Page Access</title>
-    <link rel= "stylesheet" type="text/css" href= "normalize.css">
-    <link rel= "stylesheet" type="text/css" href= "admin_style.css">
+    <link rel= "stylesheet" type="text/css" href= "../normalize.css">
+    <link rel= "stylesheet" type="text/css" href= "../admin_style.css">
 </head>
 <body>
     <div class="mainText">
@@ -21,7 +21,7 @@
     <div class="forms container">
         <div class="formSize">
             <p>Add additional paragraphs</p>
-            <form class="formAdd">
+            <form method="post" action="admin_add.php" class="formAdd">
                 <textarea rows="6" cols="80" name="add_form"></textarea>
                 <input type="submit" name="addSubmit">
             </form>
