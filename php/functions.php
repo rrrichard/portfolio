@@ -54,18 +54,26 @@ function addParagraphToDb (PDO $db, string $addSubmit) : void{
 
 
 
-function editDropDown (PDO $db){
-    $query = $db->prepare("SELECT `id`, `paragraph` FROM `about_me`;");
-    $query->execute();
-    return $query->fetchAll();
-}
+//function editDropdown (PDO $db){
+//    $query = $db->prepare("SELECT `id`, `paragraph` FROM `about_me`;");
+//    $query->execute();
+//    return $query->fetchAll();
+//}
 
-function editParagraphDropdown ($editParagraphs){
+function editParagraphDropdown ($paragraphs){
     $paragraphList = '';
-    foreach ($editParagraphs as $paragraph){
-        $paragraphList .= '<option' . $paragraph['id'] . '>' . $paragraph['paragraph'] . '</option>'''
+    $i = 1 ;
+    foreach ($paragraphs as $paragraph){
+        $charPreview = substr($paragraph['paragraph'], 0, 20);
+        $paragraphList .= '<option value=' . $paragraph['id'] . '>paragraph '. $i++ . ' ' . $charPreview . '</option>';
     }
     return $paragraphList;
+}
+
+
+function lala(){
+
+
 }
 
 
