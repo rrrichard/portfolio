@@ -15,22 +15,39 @@ function addAboutMe($db)
     return $query->fetchAll();
 }
 
+//
+///**
+// * this function enables the data to be returned as a <p> string in the website
+// *
+// * @param array $paragraphs calls in the method that contains all the arrays of the paragraphs
+// *
+// * @return string returns each paragraph in the database as a <p> string and enables it to be output in the website
+// */
+//function addParagraphs(array $paragraphs) :string {
+//    if (is_array($paragraphs)) {
+//
+//        $paragraphPlaceholder = '';
+//        foreach ($paragraphs as $paragraph) {
+//            $paragraphPlaceholder .= '<p>' . $paragraph['paragraph'] . '</p>';
+//        }
+//        return $paragraphPlaceholder;
+//    } else return 'You must enter an array';
+//
+//}
 
-/**
- * this function enables the data to be returned as a <p> string in the website
- *
- * @param array $paragraphs calls in the method that contains all the arrays of the paragraphs
- *
- * @return string returns each paragraph in the database as a <p> string and enables it to be output in the website
- */
 function addParagraphs(array $paragraphs) :string {
-    if (is_array($paragraphs)) {
+
 
         $paragraphPlaceholder = '';
         foreach ($paragraphs as $paragraph) {
-            $paragraphPlaceholder .= '<p>' . $paragraph['paragraph'] . '</p>';
+            if (is_string($paragraph['paragraph']) && array_key_exists('paragraph', $paragraph)) {
+                $paragraphPlaceholder .= '<p>' . $paragraph['paragraph'] . '</p>';
+            } else {
+                $paragraphPlaceholder .= '';
+            }
         }
         return $paragraphPlaceholder;
-    } else return 'You must enter an array';
 
 }
+?>
+
