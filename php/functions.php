@@ -37,5 +37,18 @@ function addParagraphs(array $paragraphs) :string {
         return $paragraphPlaceholder;
 
 }
-?>
+
+
+
+function addParagraphToDb ($db, $addSubmit){
+    $query = $db->prepare("INSERT INTO `about_me` (`paragraph`) VALUES (:newParagraph);");
+    $query->bindParam(':newParagraph', $addSubmit);
+    $query->execute();
+}
+
+
+
+
+
+
 
