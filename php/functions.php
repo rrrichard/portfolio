@@ -10,7 +10,7 @@
  */
 function addAboutMe(PDO $db)
 {
-    $query = $db->prepare("SELECT `paragraph` FROM `about_me` WHERE `deleted` = '0';");
+    $query = $db->prepare("SELECT `id`, `paragraph` FROM `about_me` WHERE `deleted` = '0';");
     $query->execute();
     return $query->fetchAll();
 }
@@ -53,13 +53,6 @@ function addParagraphToDb (PDO $db, string $addSubmit) : void{
 }
 
 
-
-//function editDropdown (PDO $db){
-//    $query = $db->prepare("SELECT `id`, `paragraph` FROM `about_me`;");
-//    $query->execute();
-//    return $query->fetchAll();
-//}
-
 function editParagraphDropdown ($paragraphs){
     $paragraphList = '';
     $i = 1 ;
@@ -71,11 +64,28 @@ function editParagraphDropdown ($paragraphs){
 }
 
 
-function lala(){
 
 
+function getEdit($db, $editChoice){
+        $query = $db->prepare("SELECT `paragraph` FROM `about_me` WHERE `id` = :choiceId;");
+        $query->bindParam(':choiceId',$editChoice);
+        $query->execute();
+        return $query->fetchAll();
 }
 
+//function pasteEdit($getEdit){
+//    $editPopulate = '';
+//    $editPopulate .= $getEdit[0]['paragraph'];
+//    return $editPopulate;
+//}
+
+function pasteEdit($getEdit){
+    $editPopulate = '';
+    foreach ($getEdit as $paragraph){
+        $editPopulate .= $paragraph['paragraph'];
+    }
+    return $editPopulate;
+}
 
 
 
