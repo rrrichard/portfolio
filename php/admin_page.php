@@ -1,4 +1,12 @@
 <?php
+require_once 'functions.php';
+require_once '../db/db_query.php';
+//require_once 'admin_edit.php';
+//$editParagraphs = editDropdown($db);
+$db = getDbConnection();
+
+$paragraphs = addAboutMe($db);
+$editDropdownResults = editParagraphDropdown($paragraphs);
 ?>
 
 <!DOCTYPE html>
@@ -28,13 +36,11 @@
         </div>
         <div class="formSize">
             <p>Edit paragraph</p>
-            <form>
+            <form method="post" action="admin_edit.php">
                 <textarea rows="6" cols="80" name="edit_form"></textarea>
                 <h4>Choose which paragraph to edit</h4>
                 <select name="editSelect">
-                    <option>paragraph 1</option>
-                    <option>paragraph 2</option>
-                    <option>paragraph 3</option>
+                    <?php echo $editDropdownResults; ?>
                 </select>
                 <div class="submit_buttons">
                     <input type="submit" name="textEdit" value="Edit Text">
