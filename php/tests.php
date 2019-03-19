@@ -41,4 +41,11 @@ class FunctionTest extends Testcase
         addParagraphs($input);
     }
 
+    public function testAddParagraphToDbFailure(){
+        $input = [['paragraph'=>'']];
+        $this->expectException(TypeError::class);
+        addParagraphToDb($input);
+    }
+
+
 }
