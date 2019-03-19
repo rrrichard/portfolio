@@ -22,7 +22,7 @@
         <div class="formSize">
             <p>Add additional paragraphs</p>
             <form method="post" action="admin_add.php" class="formAdd">
-                <textarea rows="6" cols="80" name="add_form"></textarea>
+                <textarea rows="6" cols="80" name="add_form" pattern="[A-Za-z{1}" required></textarea>
                 <input type="submit" name="addSubmit">
             </form>
         </div>
