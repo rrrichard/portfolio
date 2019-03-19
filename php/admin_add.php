@@ -4,8 +4,6 @@ require_once 'functions.php';
 require_once '../db/db_query.php';
 
 
-$editParagraphs = editDropDown($db);
-editParagraphDropdown ($editParagraphs)
 $addSubmit = $_POST['add_form'];
 $db = getDbConnection();
 addParagraphToDb($db, $addSubmit);
