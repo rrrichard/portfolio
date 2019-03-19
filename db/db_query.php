@@ -1,9 +1,5 @@
 <?php
 
-//I need this here for memories
-//$db = new PDO ('mysql:host=127.0.0.1; dbname=portfolio', 'root');
-
-
 /**
  * this function allows the database to be called in any php while it being secured
  *
