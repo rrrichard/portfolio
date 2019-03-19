@@ -4,7 +4,7 @@
 /**
  * this function selects the paragraphs in the database and fetches all the data
  *
- * @param $db string is the variable that connects the php to mysql and allows it to be called in functions
+ * @param $db PDO is the variable that connects the php to mysql and allows it to be called in functions
  *
  * @return mixed returns all the data in order of their id
  */
@@ -37,5 +37,24 @@ function addParagraphs(array $paragraphs) :string {
         return $paragraphPlaceholder;
 
 }
-?>
+
+
+/**
+ * this function adds the string input in the 'add' form to the database
+ *
+ * @param $db PDO calls the database from the db_query because this function requires it
+ *
+ * @param $addSubmit string inserts the string in the text area to the database and pairing it with an `id` and a `deleted` number
+ */
+function addParagraphToDb (PDO $db, string $addSubmit) : void{
+    $query = $db->prepare("INSERT INTO `about_me` (`paragraph`) VALUES (:newParagraph);");
+    $query->bindParam(':newParagraph', $addSubmit);
+    $query->execute();
+}
+
+
+
+
+
+
 

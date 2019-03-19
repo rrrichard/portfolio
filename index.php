@@ -1,7 +1,8 @@
 <?php
-    require_once 'php/functions.php';
-    require_once 'db/db_query.php';
+require_once 'php/functions.php';
+require_once 'db/db_query.php';
 
+$db = getDbConnection();
 $paragraphs = addAboutMe($db);
 $paragraphResult = addParagraphs($paragraphs);
 
