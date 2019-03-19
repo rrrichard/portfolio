@@ -4,7 +4,7 @@
 /**
  * this function selects the paragraphs in the database and fetches all the data
  *
- * @param $db string is the variable that connects the php to mysql and allows it to be called in functions
+ * @param $db PDO is the variable that connects the php to mysql and allows it to be called in functions
  *
  * @return mixed returns all the data in order of their id
  */
