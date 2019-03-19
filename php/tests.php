@@ -35,8 +35,7 @@ class FunctionTest extends Testcase
     }
 
 
-    public function testAddParagraphsMalformed()
-    {
+    public function testAddParagraphsMalformed(){
         $input = 3;
         $this->expectException(TypeError::class);
         addParagraphs($input);
