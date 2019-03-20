@@ -1,8 +1,7 @@
 <?php
 require_once 'functions.php';
 require_once '../db/db_query.php';
-//require_once 'admin_edit.php';
-//$editParagraphs = editDropdown($db);
+
 $db = getDbConnection();
 $editChoice = $_POST['editSelect'];
 $newParagraph = $_POST['edit_form'];
@@ -11,17 +10,14 @@ $paragraphs = addAboutMe($db);
 $editDropdownResults = editParagraphDropdown($paragraphs);
 $getEdit = getEdit($db, $editChoice);
 
-
-
-
-
 if ($_POST['submit'] == 'Edit'){
     $pasteEdit = pasteEdit($getEdit);
-//    return '<option value=' . $editChoice . 'selected="selected">';
+    $editId = $_POST['editSelect'];
 
 }   else if ($_POST['submit'] == 'Submit'){
     editParagraph($db, $editChoice, $newParagraph);
 }
+
 
 ?>
 
@@ -53,8 +49,6 @@ if ($_POST['submit'] == 'Edit'){
         <div class="formSize">
             <p>Edit paragraph</p>
             <form method="post" action="admin_page.php">
-                <textarea rows="6" cols="80" name="edit_form"><?php echo $pasteEdit; ?></textarea>
-
                 <h4>Choose which paragraph to edit</h4>
                 <select name="editSelect">
                     <option selected="selected" value="choose">Choose Paragraph</option>
@@ -62,9 +56,21 @@ if ($_POST['submit'] == 'Edit'){
                 </select>
                 <div class="submit_buttons">
                     <input type="submit" name="submit" value="Edit">
+                </div>
+            </form>
+
+            <form method="post" action="admin_page.php">
+                <textarea rows="6" cols="80" name="edit_form"><?php echo $pasteEdit; ?></textarea>
+                <?php if (isset($editId)){
+                    echo '<input type="hidden" name="editId" value=' . $editId . ' />';
+                }?>
+                <div class="submit_buttons">
+
                     <input type="submit" name="submit" value="Submit">
                 </div>
             </form>
+
+
         </div>
         <div class="formSize">
             <p>Delete paragraph</p>
