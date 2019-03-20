@@ -1,24 +1,20 @@
 <?php
 require_once 'functions.php';
 require_once '../db/db_query.php';
-
 $db = getDbConnection();
 $editChoice = $_POST['editSelect'];
 $newParagraph = $_POST['edit_form'];
-
 $paragraphs = addAboutMe($db);
 $editDropdownResults = editParagraphDropdown($paragraphs);
 $getEdit = getEdit($db, $editChoice);
 
 if ($_POST['submit'] == 'Edit'){
     $pasteEdit = pasteEdit($getEdit);
-    $editId = $_POST['editSelect'];
-
-}   else if ($_POST['submit'] == 'Submit'){
+}
+if ($_POST['submit'] == 'Submit'){
+    $editChoice = $_POST['editId'];
     editParagraph($db, $editChoice, $newParagraph);
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -61,11 +57,10 @@ if ($_POST['submit'] == 'Edit'){
 
             <form method="post" action="admin_page.php">
                 <textarea rows="6" cols="80" name="edit_form"><?php echo $pasteEdit; ?></textarea>
-                <?php if (isset($editId)){
-                    echo '<input type="hidden" name="editId" value=' . $editId . ' />';
+                <?php if (isset($editChoice)){
+                    echo '<input type="hidden" name="editId" value=' . $editChoice . ' />';
                 }?>
                 <div class="submit_buttons">
-
                     <input type="submit" name="submit" value="Submit">
                 </div>
             </form>
