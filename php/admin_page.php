@@ -21,6 +21,12 @@ if (isset($_POST['submit'])){
     editParagraph($db, $submitChoice, $newParagraph);
     header('Location: admin_page.php');
 }
+
+if (isset($_POST['delete'])){
+    $deleteChoice = $_POST['deleteSelect'];
+    deleteParagraph($db, $deleteChoice);
+    header('Location: admin_page.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +63,7 @@ if (isset($_POST['submit'])){
                         echo $editDropdownResults;
                     } ?>
                 </select>
-                <div class="edit_button">
+                <div class="edit">
                     <input type="submit" name="edit" value="Edit">
                 </div>
             </form>
@@ -77,16 +83,16 @@ if (isset($_POST['submit'])){
         </div>
         <div class="formSize">
             <p>Delete paragraph</p>
-            <form>
+            <form method="post" action="admin_page.php">
                 <h4>Choose which paragraph to delete</h4>
                 <select name="deleteSelect">
-                    <option>paragraph 1</option>
-                    <option>paragraph 2</option>
-                    <option>paragraph 3</option>
+                    <option selected="selected" value="choose">Choose Paragraph</option>
+                    <?php if(isset($editDropdownResults)){
+                        echo $editDropdownResults;
+                    } ?>
                 </select>
-                <div class="submit_buttons">
-<!--                    <input type="submit" name="paragraphSelect" value="Select Paragraph">-->
-                    <input type="submit" name="paragraphDelete" value="Delete Paragraph">
+                <div class="submit_buttons submit">
+                    <input type="submit" name="delete" value="Delete Paragraph">
                 </div>
             </form>
         </div>
