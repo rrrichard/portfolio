@@ -154,6 +154,14 @@ function submitButton(){
 
 
 
+//to either pete or kate, dont review what is below here just yet. its for the delete
+
+function deleteParagraph($db, $deleteChoice){
+    $query = $db->prepare("UPDATE `about_me` SET `deleted`= '1' WHERE `id`= :deleteChoice;");
+    $query->bindParam(':deleteChoice', $deleteChoice);
+    return $query->execute();
+}
+
 
 
 
