@@ -52,12 +52,23 @@ function addParagraphToDb (PDO $db, string $addSubmit) : void{
     $query->execute();
 }
 
+/**this function returns an <option> tag with the paragraph value inside the opening tag and the content of that id
+ *
+ * @param array $paragraphs ignore the name, its a placeholder but it is the list of the paragraphs in the database
+ *
+ * @return string returns a list of <options> in  the dropdown
+ */
 function editParagraphDropdown (array $paragraphs) : string {
     $paragraphList = '';
     $i = 1 ;
+
     foreach ($paragraphs as $paragraph){
-        $charPreview = substr($paragraph['paragraph'], 0, 20);
-        $paragraphList .= '<option value=' . $paragraph['id'] . '>paragraph '. $i++ . ' ' . $charPreview . '</option>';
+        if (is_string($paragraph['paragraph']) && array_key_exists('paragraph', $paragraph)) {
+            $charPreview = substr($paragraph['paragraph'], 0, 20);
+            $paragraphList .= '<option value=' . $paragraph['id'] . '>paragraph ' . $i++ . ' ' . $charPreview . '</option>';
+        } else {
+            $paragraphList .= '';
+        }
     }
     return $paragraphList;
 }
