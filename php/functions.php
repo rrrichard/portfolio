@@ -42,7 +42,9 @@ function addParagraphs(array $paragraphs) :string {
  * @param $addSubmit string inserts the string in the text area to the database and pairing it with an `id` and a `deleted` number
  */
 function addParagraphToDb (PDO $db, string $addSubmit) : void{
-    if (strlen($addSubmit) < 1000) {
+    if (empty(trim($addSubmit))){
+        header('Location: admin_page.php');
+    } else if (strlen($addSubmit) < 1000) {
         $query = $db->prepare("INSERT INTO `about_me` (`paragraph`) VALUES (:newParagraph);");
         $query->bindParam(':newParagraph', $addSubmit);
         $query->execute();
@@ -50,6 +52,17 @@ function addParagraphToDb (PDO $db, string $addSubmit) : void{
         header('Location: admin_page.php');
     }
 }
+
+
+//function addParagraphToDb (PDO $db, string $addSubmit) : void{
+//    if (strlen($addSubmit) < 1000) {
+//        $query = $db->prepare("INSERT INTO `about_me` (`paragraph`) VALUES (:newParagraph);");
+//        $query->bindParam(':newParagraph', $addSubmit);
+//        $query->execute();
+//    } else {
+//        header('Location: admin_page.php');
+//    }
+//}
 
 /**this function returns an <option> tag with the paragraph value inside the opening tag and the content of that id
  *
@@ -81,10 +94,14 @@ function editParagraphDropdown (array $paragraphs) : string {
  * @return mixed retrieves one row of the result by the SELECT in MySQL
  */
 function getEdit(PDO $db, string $editChoice){
+    if ($editChoice == "choose"){
+        header('Location: admin_page.php');
+    } else {
         $query = $db->prepare("SELECT `paragraph` FROM `about_me` WHERE `id` = :choiceId;");
-        $query->bindParam(':choiceId',$editChoice);
+        $query->bindParam(':choiceId', $editChoice);
         $query->execute();
         return $query->fetch();
+    }
 }
 
 /**
@@ -116,7 +133,9 @@ function pasteEdit(array $getEdit) : string {
  * @return bool the function will only be called when the user press 'submit' and if true, will update the selected paragraph with the new paragraph
  */
 function editParagraph(PDO $db, string $submitChoice, string $newParagraph) : bool {
-    if (strlen($newParagraph) < 1000) {
+    if (empty(trim($newParagraph))){
+        header('Location: admin_page.php');
+    } else if (strlen($newParagraph) < 1000) {
         $query = $db->prepare("UPDATE `about_me` SET `paragraph`= :newParagraph WHERE `id`= :editChoice;");
         $query->bindParam(':newParagraph', $newParagraph);
         $query->bindParam(':editChoice', $submitChoice);
