@@ -63,7 +63,7 @@ if (isset($_POST['submit'])){
                 </div>
             </form>
             <form method="post" class="formy editParaRight" action="admin_page.php">
-                <textarea class="edit_submit" rows="6" cols="80" name="edit_form"><?php
+                <textarea class="edit_submit" rows="6" cols="80" name="edit_form" required><?php
                     if(isset($pasteEdit)){
                         echo $pasteEdit;
                     } ?></textarea>
