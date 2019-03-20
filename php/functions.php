@@ -42,9 +42,13 @@ function addParagraphs(array $paragraphs) :string {
  * @param $addSubmit string inserts the string in the text area to the database and pairing it with an `id` and a `deleted` number
  */
 function addParagraphToDb (PDO $db, string $addSubmit) : void{
-    $query = $db->prepare("INSERT INTO `about_me` (`paragraph`) VALUES (:newParagraph);");
-    $query->bindParam(':newParagraph', $addSubmit);
-    $query->execute();
+    if (strlen($addSubmit) < 1000) {
+        $query = $db->prepare("INSERT INTO `about_me` (`paragraph`) VALUES (:newParagraph);");
+        $query->bindParam(':newParagraph', $addSubmit);
+        $query->execute();
+    } else {
+        header('Location: admin_page.php');
+    }
 }
 
 /**this function returns an <option> tag with the paragraph value inside the opening tag and the content of that id
@@ -111,11 +115,22 @@ function pasteEdit(array $getEdit) : string {
  *
  * @return bool the function will only be called when the user press 'submit' and if true, will update the selected paragraph with the new paragraph
  */
-function editParagraph(PDO $db, string $editChoice, string $newParagraph) : bool {
-    $query = $db->prepare("UPDATE `about_me` SET `paragraph`= :newParagraph WHERE `id`= :oldParagraphId;");
-    $query->bindParam(':newParagraph', $newParagraph);
-    $query->bindParam(':oldParagraphId', $editChoice);
-    return $query->execute();
+function editParagraph(PDO $db, string $submitChoice, string $newParagraph) : bool {
+    if (strlen($newParagraph) < 1000) {
+        $query = $db->prepare("UPDATE `about_me` SET `paragraph`= :newParagraph WHERE `id`= :editChoice;");
+        $query->bindParam(':newParagraph', $newParagraph);
+        $query->bindParam(':editChoice', $submitChoice);
+        return $query->execute();
+    } else {
+        header('Location: admin_page.php');
+        }
+    }
+
+
+function submitButton(){
+    if (isset($_POST['edit'])){
+        echo '<input type="submit" name="submit" value="Submit">';
+    }
 }
 
 
