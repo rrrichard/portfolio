@@ -3,15 +3,15 @@ require_once 'functions.php';
 require_once '../db/db_query.php';
 
 
-
 $db = getDbConnection();
-$editChoice = $_POST['editSelect'];
+
 $newParagraph = $_POST['edit_form'];
 $paragraphs = addAboutMe($db);
 $editDropdownResults = editParagraphDropdown($paragraphs);
-$getEdit = getEdit($db, $editChoice);
 
 if ($_POST['submit'] == 'Edit'){
+    $editChoice = $_POST['editSelect'];
+    $getEdit = getEdit($db, $editChoice);
     $pasteEdit = pasteEdit($getEdit);
 }
 if ($_POST['submit'] == 'Submit'){
@@ -19,7 +19,6 @@ if ($_POST['submit'] == 'Submit'){
     editParagraph($db, $editChoice, $newParagraph);
 }
 
-var_dump($editDropdownResults);
 ?>
 
 <!DOCTYPE html>
@@ -69,8 +68,6 @@ var_dump($editDropdownResults);
                     <input type="submit" name="submit" value="Submit">
                 </div>
             </form>
-
-
         </div>
         <div class="formSize">
             <p>Delete paragraph</p>
