@@ -69,4 +69,30 @@ class FunctionTest extends Testcase
         editParagraphDropdown($input);
     }
 
+    public function testPasteEditSuccess(){
+        $expected = '';
+        $input = [['paragraph'=>'Hello World']];
+        $case = pasteEdit($input);
+        $this->assertEquals($expected, $case);
+    }
+
+    public function testPasteEditFailure(){
+        $expected = '';
+        $input = [['paragraph' => []]];
+        $case = pasteEdit($input);
+        $this->assertEquals($expected, $case);
+    }
+
+    public function testPasteEditFailure2(){
+        $expected = '';
+        $input = [['awesome' => []]];
+        $case = pasteEdit($input);
+        $this->assertEquals($expected, $case);
+    }
+
+    public function testPasteEditFailureMalformed(){
+        $input = 3;
+        $this->expectException(TypeError::class);
+        pasteEdit($input);
+    }
 }
