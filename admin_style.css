@@ -7,7 +7,7 @@ body {
 }
 
 .container{
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -19,12 +19,13 @@ body {
 
 .forms textarea{
     float: right;
-    height: 200px;
-    width: 400px;
+    height: 100px;
+    width: 600px;
 }
 
 form {
     display:inline-block;
+    overflow: auto;
 }
 
 form input{
@@ -44,9 +45,14 @@ form input{
     /*float:left;*/
 }
 
-.edit_button{
-    margin-top: 70px;
+.edit{
+    margin-top: 10px;
 }
+
+.submit{
+    margin-top: 10px;
+}
+
 
 /*change later*/
 /*.formText {*/
