@@ -41,4 +41,14 @@ class FunctionTest extends Testcase
         addParagraphs($input);
     }
 
+
+    public function testEditParagraphDropdownSuccess(){
+        $expected = '<option value=>paragraph 1 Hello World</option>';
+        $input = [['paragraph'=>'Hello World']];
+        $case = editParagraphDropdown($input);
+        $this->assertEquals($expected, $case);
+    }
+
+
+
 }
