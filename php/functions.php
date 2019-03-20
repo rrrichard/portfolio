@@ -52,7 +52,6 @@ function addParagraphToDb (PDO $db, string $addSubmit) : void{
     $query->execute();
 }
 
-
 function editParagraphDropdown ($paragraphs){
     $paragraphList = '';
     $i = 1 ;
@@ -63,9 +62,6 @@ function editParagraphDropdown ($paragraphs){
     return $paragraphList;
 }
 
-
-
-
 function getEdit($db, $editChoice){
         $query = $db->prepare("SELECT `paragraph` FROM `about_me` WHERE `id` = :choiceId;");
         $query->bindParam(':choiceId',$editChoice);
@@ -73,11 +69,6 @@ function getEdit($db, $editChoice){
         return $query->fetchAll();
 }
 
-//function pasteEdit($getEdit){
-//    $editPopulate = '';
-//    $editPopulate .= $getEdit[0]['paragraph'];
-//    return $editPopulate;
-//}
 
 function pasteEdit($getEdit){
     $editPopulate = '';
@@ -85,6 +76,14 @@ function pasteEdit($getEdit){
         $editPopulate .= $paragraph['paragraph'];
     }
     return $editPopulate;
+}
+
+function editParagraph($db, $editChoice,$newParagraph){
+    $query = $db->prepare("UPDATE `about_me` SET `paragraph`= :newParagraph WHERE `id`= :oldParagraphId;");
+    $query->bindParam(':newParagraph', $newParagraph);
+    $query->bindParam(':oldParagraphId', $editChoice);
+
+    $query->execute();
 }
 
 
