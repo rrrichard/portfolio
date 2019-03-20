@@ -2,23 +2,25 @@
 require_once 'functions.php';
 require_once '../db/db_query.php';
 
-
 $db = getDbConnection();
-
 $newParagraph = $_POST['edit_form'];
+$addSubmit = $_POST['add_form'];
 $paragraphs = addAboutMe($db);
 $editDropdownResults = editParagraphDropdown($paragraphs);
 
-if ($_POST['submit'] == 'Edit'){
+
+if (isset($_POST['edit'])){
     $editChoice = $_POST['editSelect'];
     $getEdit = getEdit($db, $editChoice);
     $pasteEdit = pasteEdit($getEdit);
 }
-if ($_POST['submit'] == 'Submit'){
-    $editChoice = $_POST['editId'];
-    editParagraph($db, $editChoice, $newParagraph);
-}
 
+
+if (isset($_POST['submit'])){
+    $submitChoice = $_POST['editId'];
+    editParagraph($db, $submitChoice, $newParagraph);
+    header('Location: admin_page.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +44,7 @@ if ($_POST['submit'] == 'Submit'){
         <div class="formSize">
             <p>Add additional paragraphs</p>
             <form method="post" action="admin_add.php" class="formAdd">
-                <textarea rows="6" cols="80" name="add_form" required></textarea>
+                <textarea rows="6" cols="80" name="add_form"  required></textarea>
                 <input type="submit" name="addSubmit">
             </form>
         </div>
@@ -52,20 +54,25 @@ if ($_POST['submit'] == 'Submit'){
                 <h4>Choose which paragraph to edit</h4>
                 <select name="editSelect">
                     <option selected="selected" value="choose">Choose Paragraph</option>
-                    <?php echo $editDropdownResults; ?>
+                    <?php if(isset($editDropdownResults)){
+                        echo $editDropdownResults;
+                    } ?>
                 </select>
                 <div class="edit_button">
-                    <input type="submit" name="submit" value="Edit">
+                    <input type="submit" name="edit" value="Edit">
                 </div>
             </form>
-
             <form method="post" class="formy editParaRight" action="admin_page.php">
-                <textarea class="edit_submit" rows="6" cols="80" name="edit_form"><?php echo $pasteEdit; ?></textarea>
+                <textarea class="edit_submit" rows="6" cols="80" name="edit_form"><?php
+                    if(isset($pasteEdit)){
+                        echo $pasteEdit;
+                    } ?></textarea>
                 <?php if (isset($editChoice)){
                     echo '<input type="hidden" name="editId" value=' . $editChoice . ' />';
-                }?>
+                }
+                ?>
                 <div class="submit_buttons">
-                    <input type="submit" name="submit" value="Submit">
+                    <?php $submitButton = submitButton(); ?>
                 </div>
             </form>
         </div>
