@@ -7,7 +7,7 @@ body {
 }
 
 .container{
-    width: 90%;
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -19,13 +19,17 @@ body {
 
 .forms textarea{
     float: right;
+    height: 200px;
+    width: 400px;
 }
 
-.forms textarea{
-    margin-top: -50px;
+form {
+    display:inline-block;
 }
 
-
+form input{
+    float:left;
+}
 .forms p{
     font-size: 20px;
     font-weight: bold;
@@ -37,7 +41,7 @@ body {
 }
 
 .formSize select{
-    float:left;
+    /*float:left;*/
 }
 
 .edit_button{
@@ -45,9 +49,9 @@ body {
 }
 
 /*change later*/
-.formy {
-    float: left;
-}
+/*.formText {*/
+    /*float: left;*/
+/*}*/
 
 .editParaRight {
     float:right;
