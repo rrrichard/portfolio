@@ -49,6 +49,24 @@ class FunctionTest extends Testcase
         $this->assertEquals($expected, $case);
     }
 
+    public function testEditParagraphDropdownFailure(){
+        $expected = '';
+        $input = [['paragraph' => []]];
+        $case = editParagraphDropdown($input);
+        $this->assertEquals($expected, $case);
+    }
 
+    public function testEditParagraphDropdownFailure2(){
+        $expected = '';
+        $input = [['awesome' => []]];
+        $case = editParagraphDropdown($input);
+        $this->assertEquals($expected, $case);
+    }
+
+    public function testEditParagraphDropdownMalformed(){
+        $input = 3;
+        $this->expectException(TypeError::class);
+        editParagraphDropdown($input);
+    }
 
 }
