@@ -21,20 +21,35 @@ body {
     float: right;
 }
 
+.forms textarea{
+    margin-top: -50px;
+}
+
+
 .forms p{
     font-size: 20px;
     font-weight: bold;
 }
 
 .formSize {
-    height: 110px;
     margin: 100px auto;
+    overflow: auto;
 }
 
 .formSize select{
     float:left;
 }
 
-.submit_buttons{
+.edit_button{
     margin-top: 70px;
 }
+
+/*change later*/
+.formy {
+    float: left;
+}
+
+.editParaRight {
+    float:right;
+}
+

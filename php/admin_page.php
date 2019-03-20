@@ -1,6 +1,9 @@
 <?php
 require_once 'functions.php';
 require_once '../db/db_query.php';
+
+
+
 $db = getDbConnection();
 $editChoice = $_POST['editSelect'];
 $newParagraph = $_POST['edit_form'];
@@ -15,6 +18,8 @@ if ($_POST['submit'] == 'Submit'){
     $editChoice = $_POST['editId'];
     editParagraph($db, $editChoice, $newParagraph);
 }
+
+var_dump($editDropdownResults);
 ?>
 
 <!DOCTYPE html>
@@ -44,19 +49,19 @@ if ($_POST['submit'] == 'Submit'){
         </div>
         <div class="formSize">
             <p>Edit paragraph</p>
-            <form method="post" action="admin_page.php">
+            <form method="post" class="formy editPara" action="admin_page.php">
                 <h4>Choose which paragraph to edit</h4>
                 <select name="editSelect">
                     <option selected="selected" value="choose">Choose Paragraph</option>
                     <?php echo $editDropdownResults; ?>
                 </select>
-                <div class="submit_buttons">
+                <div class="edit_button">
                     <input type="submit" name="submit" value="Edit">
                 </div>
             </form>
 
-            <form method="post" action="admin_page.php">
-                <textarea rows="6" cols="80" name="edit_form"><?php echo $pasteEdit; ?></textarea>
+            <form method="post" class="formy editParaRight" action="admin_page.php">
+                <textarea class="edit_submit" rows="6" cols="80" name="edit_form"><?php echo $pasteEdit; ?></textarea>
                 <?php if (isset($editChoice)){
                     echo '<input type="hidden" name="editId" value=' . $editChoice . ' />';
                 }?>

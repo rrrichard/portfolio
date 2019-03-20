@@ -52,7 +52,7 @@ function addParagraphToDb (PDO $db, string $addSubmit) : void{
     $query->execute();
 }
 
-function editParagraphDropdown ($paragraphs){
+function editParagraphDropdown (array $paragraphs) : string {
     $paragraphList = '';
     $i = 1 ;
     foreach ($paragraphs as $paragraph){
@@ -66,15 +66,13 @@ function getEdit($db, $editChoice){
         $query = $db->prepare("SELECT `paragraph` FROM `about_me` WHERE `id` = :choiceId;");
         $query->bindParam(':choiceId',$editChoice);
         $query->execute();
-        return $query->fetchAll();
+        return $query->fetch();
 }
 
 
 function pasteEdit($getEdit){
     $editPopulate = '';
-    foreach ($getEdit as $paragraph){
-        $editPopulate .= $paragraph['paragraph'];
-    }
+    $editPopulate .= $getEdit['paragraph'];
     return $editPopulate;
 }
 
