@@ -32,25 +32,24 @@ if (isset($_POST['submit'])){
     <link rel= "stylesheet" type="text/css" href= "../admin_style.css">
 </head>
 <body>
-    <div class="mainText">
-        <div class="container">
+    <div class="mainText container">
             <h4>Welcome</h4>
             <h2>RICHARD</h2>
             <h3>'ABOUT ME'</h3>
-        </div>
     </div>
-
     <div class="forms container">
         <div class="formSize">
             <p>Add additional paragraphs</p>
-            <form method="post" action="admin_add.php" class="formAdd">
-                <textarea rows="6" cols="80" name="add_form"  required></textarea>
+            <form method="post" action="admin_add.php" class="formAdd editParaRight">
+                <textarea name="add_form"  required></textarea>
+                <div>
                 <input type="submit" name="addSubmit">
+                </div>
             </form>
         </div>
         <div class="formSize">
             <p>Edit paragraph</p>
-            <form method="post" class="formy editPara" action="admin_page.php">
+            <form method="post" class="formText" action="admin_page.php">
                 <h4>Choose which paragraph to edit</h4>
                 <select name="editSelect">
                     <option selected="selected" value="choose">Choose Paragraph</option>
@@ -62,8 +61,8 @@ if (isset($_POST['submit'])){
                     <input type="submit" name="edit" value="Edit">
                 </div>
             </form>
-            <form method="post" class="formy editParaRight" action="admin_page.php">
-                <textarea class="edit_submit" rows="6" cols="80" name="edit_form" required><?php
+            <form method="post" class="formText editParaRight" action="admin_page.php">
+                <textarea class="edit_submit" name="edit_form" required><?php
                     if(isset($pasteEdit)){
                         echo $pasteEdit;
                     } ?></textarea>
@@ -86,7 +85,7 @@ if (isset($_POST['submit'])){
                     <option>paragraph 3</option>
                 </select>
                 <div class="submit_buttons">
-                    <input type="submit" name="paragraphSelect" value="Select Paragraph">
+<!--                    <input type="submit" name="paragraphSelect" value="Select Paragraph">-->
                     <input type="submit" name="paragraphDelete" value="Delete Paragraph">
                 </div>
             </form>
