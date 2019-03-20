@@ -5,24 +5,23 @@ require_once '../db/db_query.php';
 //$editParagraphs = editDropdown($db);
 $db = getDbConnection();
 $editChoice = $_POST['editSelect'];
+$newParagraph = $_POST['edit_form'];
+
 $paragraphs = addAboutMe($db);
 $editDropdownResults = editParagraphDropdown($paragraphs);
-
 $getEdit = getEdit($db, $editChoice);
-$pasteEdit = pasteEdit($getEdit);
-var_dump($editChoice);
-var_dump($getEdit);
-
-
-//if (isset($editChoice)){
-//    $query = $db->prepare("SELECT `paragraph` FROM `about_me` WHERE `id` = :choiceId");
-//    $query->bindParam(':choiceId',$editDropdownResults);
-//    $query->execute();
-//    return $query->fetchAll();
-//}
 
 
 
+
+
+if ($_POST['submit'] == 'Edit'){
+    $pasteEdit = pasteEdit($getEdit);
+//    return '<option value=' . $editChoice . 'selected="selected">';
+
+}   else if ($_POST['submit'] == 'Submit'){
+    editParagraph($db, $editChoice, $newParagraph);
+}
 
 ?>
 
@@ -58,11 +57,12 @@ var_dump($getEdit);
 
                 <h4>Choose which paragraph to edit</h4>
                 <select name="editSelect">
+                    <option selected="selected" value="choose">Choose Paragraph</option>
                     <?php echo $editDropdownResults; ?>
                 </select>
                 <div class="submit_buttons">
-                    <input type="submit" name="textEdit" value="Edit Text">
-                    <input type="submit" name="textSubmit" value="Submit New Text">
+                    <input type="submit" name="submit" value="Edit">
+                    <input type="submit" name="submit" value="Submit">
                 </div>
             </form>
         </div>
