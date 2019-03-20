@@ -15,7 +15,6 @@ function addAboutMe(PDO $db)
     return $query->fetchAll();
 }
 
-
 /**
  * this function enables the data to be returned as a <p> string in the website
  *
@@ -24,9 +23,7 @@ function addAboutMe(PDO $db)
  * @return string returns each paragraph in the database as a <p> string and enables it to be output in the website
  */
 function addParagraphs(array $paragraphs) :string {
-
-
-        $paragraphPlaceholder = '';
+    $paragraphPlaceholder = '';
         foreach ($paragraphs as $paragraph) {
             if (is_string($paragraph['paragraph']) && array_key_exists('paragraph', $paragraph)) {
                 $paragraphPlaceholder .= '<p>' . $paragraph['paragraph'] . '</p>';
@@ -35,9 +32,7 @@ function addParagraphs(array $paragraphs) :string {
             }
         }
         return $paragraphPlaceholder;
-
 }
-
 
 /**
  * this function adds the string input in the 'add' form to the database
@@ -61,7 +56,6 @@ function addParagraphToDb (PDO $db, string $addSubmit) : void{
 function editParagraphDropdown (array $paragraphs) : string {
     $paragraphList = '';
     $i = 1 ;
-
     foreach ($paragraphs as $paragraph){
         if (is_string($paragraph['paragraph']) && array_key_exists('paragraph', $paragraph)) {
             $charPreview = substr($paragraph['paragraph'], 0, 20);
@@ -73,27 +67,55 @@ function editParagraphDropdown (array $paragraphs) : string {
     return $paragraphList;
 }
 
-function getEdit($db, $editChoice){
+/**
+ * this function retrieves the paragraph that is chosen in the dropdown list
+ *
+ * @param $db PDO calls the database from the db_query because this function requires it
+ *
+ * @param $editChoice string outputs a number of the id that will be used by the WHERE in MySQL
+ *
+ * @return mixed retrieves one row of the result by the SELECT in MySQL
+ */
+function getEdit(PDO $db, string $editChoice){
         $query = $db->prepare("SELECT `paragraph` FROM `about_me` WHERE `id` = :choiceId;");
         $query->bindParam(':choiceId',$editChoice);
         $query->execute();
         return $query->fetch();
 }
 
-
-function pasteEdit($getEdit){
+/**
+ * this function enables the html page to call and put the paragraph that is chosen from the dropdown and into the textarea for edit
+ *
+ * @param array $getEdit is the variable that retrieves the output of the getEdit function, which is the selected paragraph in the dropdown
+ *
+ * @return string returns a variable that can be assigned in the admin page and can be put into the textarea, the textarea will be populated by the chosen paragraph
+ */
+function pasteEdit(array $getEdit) : string {
     $editPopulate = '';
-    $editPopulate .= $getEdit['paragraph'];
+    if (is_string($getEdit['paragraph']) &&array_key_exists('paragraph', $getEdit)) {
+        $editPopulate .= $getEdit['paragraph'];
+    } else {
+        $editPopulate .= '';
+    }
     return $editPopulate;
 }
 
-function editParagraph($db, $editChoice,$newParagraph){
+/**
+ * this function updates the existing paragraph in the database with the text that was submitted in the edit form text area
+ *
+ * @param PDO $db calls the database from the db_query because this function requires it
+ *
+ * @param $editChoice string outputs a number of the id that will be used by the WHERE in MySQL
+ *
+ * @param $newParagraph string is a variable that gets the text that was submitted in the 'edit paragraph' text area
+ *
+ * @return bool the function will only be called when the user press 'submit' and if true, will update the selected paragraph with the new paragraph
+ */
+function editParagraph(PDO $db, string $editChoice, string $newParagraph) : bool {
     $query = $db->prepare("UPDATE `about_me` SET `paragraph`= :newParagraph WHERE `id`= :oldParagraphId;");
     $query->bindParam(':newParagraph', $newParagraph);
     $query->bindParam(':oldParagraphId', $editChoice);
-
     return $query->execute();
-
 }
 
 
