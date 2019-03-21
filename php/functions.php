@@ -8,7 +8,7 @@
  *
  * @return mixed returns all the data in order of their id
  */
-function addAboutMe(PDO $db)
+function addAboutMe(PDO $db) : array
 {
     $query = $db->prepare("SELECT `id`, `paragraph` FROM `about_me` WHERE `deleted` = '0';");
     $query->execute();
@@ -77,9 +77,9 @@ function editParagraphDropdown (array $paragraphs) : string {
  *
  * @param string $editChoice outputs a number of the id that will be used by the WHERE in MySQL
  *
- * @return mixed retrieves one row of the result by the SELECT in MySQL
+ * @return mixed retrieves an array from one row of the result by the SELECT in MySQL
  */
-function getEdit(PDO $db, string $editChoice){
+function getEdit(PDO $db, string $editChoice) : array {
     $query = $db->prepare("SELECT `paragraph` FROM `about_me` WHERE `id` = :choiceId;");
     $query->bindParam(':choiceId', $editChoice);
     $query->execute();
@@ -105,30 +105,25 @@ function pasteEdit(array $getEdit) : string {
     return $editPopulate;
 }
 
+
 /**
  * this function updates the existing paragraph in the database with the text that was submitted in the edit form text area
  *
  * @param PDO $db calls the database from the db_query because this function requires it
  *
- * @param $submitChoice string outputs a number of the id that will be used by the WHERE in MySQL
+ * @param string $submitChoice outputs a number of the id that will be used by the WHERE in MySQL
  *
- * @param $newParagraph string is a variable that gets the text that was submitted in the 'edit paragraph' text area
+ * @param string $newParagraph is a variable that gets the text that was submitted in the 'edit paragraph' text area
  *
  * @return bool the function will only be called when the user press 'submit' and if true, will update the selected paragraph with the new paragraph
  */
-function editParagraph(PDO $db, string $submitChoice, string $newParagraph) : bool {
-    if (empty(trim($newParagraph))){
-        header('Location: admin_page.php');
-    } else if (strlen($newParagraph) < 1000) {
-        $query = $db->prepare("UPDATE `about_me` SET `paragraph`= :newParagraph WHERE `id`= :editChoice;");
-        $query->bindParam(':newParagraph', $newParagraph);
-        $query->bindParam(':editChoice', $submitChoice);
-        return $query->execute();
-    } else {
-        header('Location: admin_page.php');
-        }
-    }
-
+function editParagraph(PDO $db, string $submitChoice, string $newParagraph) : bool
+{
+    $query = $db->prepare("UPDATE `about_me` SET `paragraph`= :newParagraph WHERE `id`= :editChoice;");
+    $query->bindParam(':newParagraph', $newParagraph);
+    $query->bindParam(':editChoice', $submitChoice);
+    return $query->execute();
+}
 
 /**
  * this function 'deletes' a function by changing the selected paragraph's `deleted` to 1 instead of the default 0
@@ -145,7 +140,12 @@ function deleteParagraph(PDO $db, string $deleteChoice){
     return $query->execute();
 }
 
-function submitButton(){
+
+/** this function returns an input button once edit is clicked and a paragraph is chosen
+ *
+ * @return string a html submit button
+ */
+function submitButton() : string {
     return '<input type="submit" name="submit" value="Submit">';
 }
 
