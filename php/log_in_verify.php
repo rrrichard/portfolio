@@ -5,18 +5,11 @@ require_once '../db/db_query.php';
 
 $db = getDbConnection();
 
-if (isset($_POST['username'])){
+if (isset($_POST['username']) && isset($_POST['password'])){
     $postUsername = $_POST['username'];
-}
-
-if (isset($_POST['password'])){
     $postPassword = $_POST['password'];
-}
-
-if (isset($_POST['username'])){
-    $postUsername = $_POST['username'];
     $test = usernameVerify($db, $postUsername, $postPassword);
-    if ($test == true || $_SESSION == true){
+    if ($test == true){
         $_SESSION['valid'] = true;
         header('Location: admin_page.php');
     } else {
