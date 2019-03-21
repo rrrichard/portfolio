@@ -10,10 +10,6 @@ if (isset($_POST['add_form'])){
     $addSubmit = $_POST['add_form'];
 }
 
-//if (isset($_POST['edit_form'])){
-//    $newParagraph = $_POST['edit_form'];
-//}
-
 if (isset($_POST['edit'])){
     $submitButton = submitButton();
     $editChoice = $_POST['editSelect'];
@@ -21,26 +17,28 @@ if (isset($_POST['edit'])){
         header('Location: admin_page.php');
     } else {
         $getEdit = getEdit($db, $editChoice);
+        $editHidden = '<input type="hidden" name="editId" value=' . $editChoice . ' />';
     }
     $pasteEdit = pasteEdit($getEdit);
 }
-
 
 if (isset($_POST['submit'])){
     if (isset($_POST['edit_form'])){
         $newParagraph = $_POST['edit_form'];
     }
-    $submitChoice = $_POST['editId'];
-    editParagraph($db, $submitChoice, $newParagraph);
-    header('Location: admin_page.php');
+    if (empty(trim($newParagraph)) || (strlen($newParagraph) > 1000) ) {
+        header('Location: admin_page.php');
+    } else {
+        $submitChoice = $_POST['editId'];
+        editParagraph($db, $submitChoice, $newParagraph);
+        header('Location: admin_page.php');
+    }
 }
 
 if (isset($_POST['delete'])){
     $deleteChoice = $_POST['deleteSelect'];
     deleteParagraph($db, $deleteChoice);
-
 }
-
 
 
 var_dump($submitChoice);
@@ -88,7 +86,7 @@ var_dump($submitChoice);
                         echo $pasteEdit;
                     } ?></textarea>
                 <?php if (isset($editChoice)){
-                    echo '<input type="hidden" name="editId" value=' . $editChoice . ' />';
+                    echo $editHidden;
                 }
                 ?>
                 <div class="submit_buttons">
