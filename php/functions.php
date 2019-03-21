@@ -140,4 +140,11 @@ function submitButton() : string {
     return '<input type="submit" name="submit" value="Submit">';
 }
 
+function usernameVerify($db, $postUsername, $postPassword){
+    $query = $db->prepare("SELECT `id` FROM `accounts` WHERE `username` = :postUsername AND `password` = :postPassword");
+    $query->bindParam(':postUsername', $postUsername);
+    $query->bindParam(':postPassword', $postPassword);
+    $query->execute();
+    return $query->fetch();
+}
 
