@@ -8,8 +8,7 @@
  *
  * @return mixed returns all the data in order of their id
  */
-function addAboutMe(PDO $db) : array
-{
+function addAboutMe(PDO $db) : array {
     $query = $db->prepare("SELECT `id`, `paragraph` FROM `about_me` WHERE `deleted` = '0';");
     $query->execute();
     return $query->fetchAll();
@@ -34,7 +33,6 @@ function addParagraphs(array $paragraphs) :string {
         return $paragraphPlaceholder;
 }
 
-
 /**
  * this function adds the string input in the 'add' form to the database
  *
@@ -47,7 +45,6 @@ function addParagraphToDb (PDO $db, string $addSubmit){
     $query->bindParam(':newParagraph', $addSubmit);
     $query->execute();
 }
-
 
 /**this function returns an <option> tag with the paragraph value inside the opening tag and the content of that id
  *
@@ -69,7 +66,6 @@ function editParagraphDropdown (array $paragraphs) : string {
     return $paragraphList;
 }
 
-
 /**
  * this function retrieves the paragraph that is chosen in the dropdown list
  *
@@ -85,8 +81,6 @@ function getEdit(PDO $db, string $editChoice) : array {
     $query->execute();
     return $query->fetch();
 }
-
-
 
 /**
  * this function enables the html page to call and put the paragraph that is chosen from the dropdown and into the textarea for edit
@@ -105,7 +99,6 @@ function pasteEdit(array $getEdit) : string {
     return $editPopulate;
 }
 
-
 /**
  * this function updates the existing paragraph in the database with the text that was submitted in the edit form text area
  *
@@ -117,8 +110,7 @@ function pasteEdit(array $getEdit) : string {
  *
  * @return bool the function will only be called when the user press 'submit' and if true, will update the selected paragraph with the new paragraph
  */
-function editParagraph(PDO $db, string $submitChoice, string $newParagraph) : bool
-{
+function editParagraph(PDO $db, string $submitChoice, string $newParagraph) : bool {
     $query = $db->prepare("UPDATE `about_me` SET `paragraph`= :newParagraph WHERE `id`= :editChoice;");
     $query->bindParam(':newParagraph', $newParagraph);
     $query->bindParam(':editChoice', $submitChoice);
@@ -134,12 +126,11 @@ function editParagraph(PDO $db, string $submitChoice, string $newParagraph) : bo
  *
  * @return mixed 'deletes' the paragraph and prevents it from showing in the portfolio
  */
-function deleteParagraph(PDO $db, string $deleteChoice){
+function deleteParagraph(PDO $db, string $deleteChoice) : bool {
     $query = $db->prepare("UPDATE `about_me` SET `deleted`= '1' WHERE `id`= :deleteChoice;");
     $query->bindParam(':deleteChoice', $deleteChoice);
     return $query->execute();
 }
-
 
 /** this function returns an input button once edit is clicked and a paragraph is chosen
  *
