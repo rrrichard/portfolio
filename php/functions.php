@@ -49,16 +49,6 @@ function addParagraphToDb (PDO $db, string $addSubmit){
 }
 
 
-//function addParagraphToDb (PDO $db, string $addSubmit) : void{
-//    if (strlen($addSubmit) < 1000) {
-//        $query = $db->prepare("INSERT INTO `about_me` (`paragraph`) VALUES (:newParagraph);");
-//        $query->bindParam(':newParagraph', $addSubmit);
-//        $query->execute();
-//    } else {
-//        header('Location: admin_page.php');
-//    }
-//}
-
 /**this function returns an <option> tag with the paragraph value inside the opening tag and the content of that id
  *
  * @param array $paragraphs ignore the name, its a placeholder but it is the list of the paragraphs in the database
@@ -79,25 +69,24 @@ function editParagraphDropdown (array $paragraphs) : string {
     return $paragraphList;
 }
 
+
 /**
  * this function retrieves the paragraph that is chosen in the dropdown list
  *
- * @param $db PDO calls the database from the db_query because this function requires it
+ * @param PDO $db calls the database from the db_query because this function requires it
  *
- * @param $editChoice string outputs a number of the id that will be used by the WHERE in MySQL
+ * @param string $editChoice outputs a number of the id that will be used by the WHERE in MySQL
  *
  * @return mixed retrieves one row of the result by the SELECT in MySQL
  */
 function getEdit(PDO $db, string $editChoice){
-    if ($editChoice == "choose"){
-        header('Location: admin_page.php');
-    } else {
-        $query = $db->prepare("SELECT `paragraph` FROM `about_me` WHERE `id` = :choiceId;");
-        $query->bindParam(':choiceId', $editChoice);
-        $query->execute();
-        return $query->fetch();
-    }
+    $query = $db->prepare("SELECT `paragraph` FROM `about_me` WHERE `id` = :choiceId;");
+    $query->bindParam(':choiceId', $editChoice);
+    $query->execute();
+    return $query->fetch();
 }
+
+
 
 /**
  * this function enables the html page to call and put the paragraph that is chosen from the dropdown and into the textarea for edit
