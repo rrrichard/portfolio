@@ -84,7 +84,8 @@ if (isset($_POST['delete'])){
                     if(isset($pasteEdit)){
                         echo $pasteEdit;
                     } ?></textarea>
-                <?php if (isset($editChoice)){
+                <?php
+                if (isset($editChoice)){
                     echo $editHidden;
                 }
                 ?>
