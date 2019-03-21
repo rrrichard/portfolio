@@ -34,23 +34,18 @@ function addParagraphs(array $paragraphs) :string {
         return $paragraphPlaceholder;
 }
 
+
 /**
  * this function adds the string input in the 'add' form to the database
  *
- * @param $db PDO calls the database from the db_query because this function requires it
+ * @param PDO $db calls the database from the db_query because this function requires it
  *
- * @param $addSubmit string inserts the string in the text area to the database and pairing it with an `id` and a `deleted` number
+ * @param string $addSubmit inserts the string in the text area to the database and pairing it with an `id` and a `deleted` number
  */
-function addParagraphToDb (PDO $db, string $addSubmit) : void{
-    if (empty(trim($addSubmit))){
-        header('Location: admin_page.php');
-    } else if (strlen($addSubmit) < 1000) {
-        $query = $db->prepare("INSERT INTO `about_me` (`paragraph`) VALUES (:newParagraph);");
-        $query->bindParam(':newParagraph', $addSubmit);
-        $query->execute();
-    } else {
-        header('Location: admin_page.php');
-    }
+function addParagraphToDb (PDO $db, string $addSubmit){
+    $query = $db->prepare("INSERT INTO `about_me` (`paragraph`) VALUES (:newParagraph);");
+    $query->bindParam(':newParagraph', $addSubmit);
+    $query->execute();
 }
 
 
@@ -146,16 +141,23 @@ function editParagraph(PDO $db, string $submitChoice, string $newParagraph) : bo
     }
 
 
-
-
-//to everyone! this is a shady beer , dont review what is below here just yet. its for the delete
-
-function deleteParagraph($db, $deleteChoice){
+/**
+ * this function 'deletes' a function by changing the selected paragraph's `deleted` to 1 instead of the default 0
+ *
+ * @param $db PDO calls the database from the db_query because this function requires it
+ *
+ * @param $deleteChoice string retrieves the `id` of the selected choice
+ *
+ * @return mixed 'deletes' the paragraph and prevents it from showing in the portfolio
+ */
+function deleteParagraph(PDO $db, string $deleteChoice){
     $query = $db->prepare("UPDATE `about_me` SET `deleted`= '1' WHERE `id`= :deleteChoice;");
     $query->bindParam(':deleteChoice', $deleteChoice);
     return $query->execute();
 }
 
-
+function submitButton(){
+    return '<input type="submit" name="submit" value="Submit">';
+}
 
 
