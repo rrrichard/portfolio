@@ -17,7 +17,11 @@ if (isset($_POST['add_form'])){
 if (isset($_POST['edit'])){
     $submitButton = submitButton();
     $editChoice = $_POST['editSelect'];
-    $getEdit = getEdit($db, $editChoice);
+    if ($editChoice == "choose") {
+        header('Location: admin_page.php');
+    } else {
+        $getEdit = getEdit($db, $editChoice);
+    }
     $pasteEdit = pasteEdit($getEdit);
 }
 
@@ -36,6 +40,7 @@ if (isset($_POST['delete'])){
     deleteParagraph($db, $deleteChoice);
 
 }
+
 
 
 var_dump($submitChoice);
