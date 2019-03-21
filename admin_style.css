@@ -41,10 +41,6 @@ form input{
     overflow: auto;
 }
 
-.formSize select{
-    /*float:left;*/
-}
-
 .edit{
     margin-top: 10px;
 }
