@@ -5,12 +5,10 @@ require_once '../db/db_query.php';
 
 
 $db = getDbConnection();
-//addParagraphToDb($db, $addSubmit);
-
 
 if (isset($_POST['add_form'])){
     $addSubmit = $_POST['add_form'];
-    if (empty(trim($addSubmit))){
+    if (empty(trim($addSubmit)) || (strlen($addSubmit) > 1000)){
         header('Location: admin_page.php');
     } else addParagraphToDb($db, $addSubmit);
 }
