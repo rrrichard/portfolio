@@ -1,5 +1,10 @@
 <?php
 require_once 'log_in_verify.php';
+
+if ($_SESSION == true){
+    header('Location: admin_page.php');
+}
+
 ?>
 
 <!DOCTYPE html>
