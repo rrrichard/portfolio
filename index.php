@@ -8,8 +8,6 @@ $paragraphResult = addParagraphs($paragraphs);
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
