@@ -4,6 +4,10 @@ require_once '../db/db_query.php';
 
 $db = getDbConnection();
 
+if ($_SESSION == false){
+    header('Location: log_in.php');
+}
+
 if (isset($_POST['add_form'])){
     $addSubmit = $_POST['add_form'];
     if (empty(trim($addSubmit)) || (strlen($addSubmit) > 1000)){
