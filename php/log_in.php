@@ -1,5 +1,5 @@
 <?php
-
+require_once 'log_in_verify.php';
 ?>
 
 <!DOCTYPE html>
