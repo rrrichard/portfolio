@@ -3,15 +3,19 @@ require_once 'functions.php';
 require_once '../db/db_query.php';
 
 $db = getDbConnection();
-$newParagraph = $_POST['edit_form'];
-$addSubmit = $_POST['add_form'];
 $paragraphs = addAboutMe($db);
 $editDropdownResults = editParagraphDropdown($paragraphs);
-$submitButton = '';
+
+if (isset($_POST['add_form'])){
+    $addSubmit = $_POST['add_form'];
+}
+
+//if (isset($_POST['edit_form'])){
+//    $newParagraph = $_POST['edit_form'];
+//}
 
 if (isset($_POST['edit'])){
-//    $submitButton = submitButton();
-    $submitButton = '<input type="submit" name="submit" value="Submit">';
+    $submitButton = submitButton();
     $editChoice = $_POST['editSelect'];
     $getEdit = getEdit($db, $editChoice);
     $pasteEdit = pasteEdit($getEdit);
@@ -19,6 +23,9 @@ if (isset($_POST['edit'])){
 
 
 if (isset($_POST['submit'])){
+    if (isset($_POST['edit_form'])){
+        $newParagraph = $_POST['edit_form'];
+    }
     $submitChoice = $_POST['editId'];
     editParagraph($db, $submitChoice, $newParagraph);
     header('Location: admin_page.php');
@@ -27,10 +34,11 @@ if (isset($_POST['submit'])){
 if (isset($_POST['delete'])){
     $deleteChoice = $_POST['deleteSelect'];
     deleteParagraph($db, $deleteChoice);
-    header('Location: admin_page.php');
+
 }
 
-var_dump($submitButton);
+
+var_dump($submitChoice);
 ?>
 
 <!DOCTYPE html>
@@ -63,9 +71,7 @@ var_dump($submitButton);
                 <h4>Choose which paragraph to edit</h4>
                 <select name="editSelect">
                     <option selected="selected" value="choose">Choose Paragraph</option>
-                    <?php if(isset($editDropdownResults)){
-                        echo $editDropdownResults;
-                    } ?>
+                    <?php  echo $editDropdownResults;  ?>
                 </select>
                 <div class="edit">
                     <input type="submit" name="edit" value="Edit">
@@ -91,9 +97,7 @@ var_dump($submitButton);
                 <h4>Choose which paragraph to delete</h4>
                 <select name="deleteSelect">
                     <option selected="selected" value="choose">Choose Paragraph</option>
-                    <?php if(isset($editDropdownResults)){
-                        echo $editDropdownResults;
-                    } ?>
+                    <?php echo $editDropdownResults; ?>
                 </select>
                 <div class="submit_buttons submit">
                     <input type="submit" name="delete" value="Delete Paragraph">
