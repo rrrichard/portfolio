@@ -4,8 +4,14 @@ require_once 'functions.php';
 require_once '../db/db_query.php';
 
 $db = getDbConnection();
-$postUsername = $_POST['username'];
-$postPassword = $_POST['password'];
+
+if (isset($_POST['username'])){
+    $postUsername = $_POST['username'];
+}
+
+if (isset($_POST['password'])){
+    $postPassword = $_POST['password'];
+}
 
 if (isset($_POST['username'])){
     $postUsername = $_POST['username'];
