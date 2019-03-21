@@ -4,11 +4,17 @@ require_once 'functions.php';
 require_once '../db/db_query.php';
 
 
-$editParagraphs = editDropDown($db);
-editParagraphDropdown ($editParagraphs)
-$addSubmit = $_POST['add_form'];
 $db = getDbConnection();
-addParagraphToDb($db, $addSubmit);
+//addParagraphToDb($db, $addSubmit);
+
+
+if (isset($_POST['add_form'])){
+    $addSubmit = $_POST['add_form'];
+    if (empty(trim($addSubmit))){
+        header('Location: admin_page.php');
+    } else addParagraphToDb($db, $addSubmit);
+}
+
 ?>
 
 Your new paragraph has been successfully added, click <a href="admin_page.php">here</a> if you want to do more.

@@ -7,7 +7,7 @@ body {
 }
 
 .container{
-    width: 90%;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -19,22 +19,37 @@ body {
 
 .forms textarea{
     float: right;
+    height: 100px;
+    width: 600px;
 }
 
+form {
+    display:inline-block;
+    overflow: auto;
+}
+
+form input{
+    float:left;
+}
 .forms p{
     font-size: 20px;
     font-weight: bold;
 }
 
 .formSize {
-    height: 110px;
     margin: 100px auto;
+    overflow: auto;
 }
 
-.formSize select{
-    float:left;
+.edit{
+    margin-top: 10px;
 }
 
-.submit_buttons{
-    margin-top: 70px;
+.submit{
+    margin-top: 10px;
 }
+
+.editParaRight {
+    float:right;
+}
+
