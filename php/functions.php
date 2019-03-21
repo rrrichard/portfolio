@@ -113,7 +113,7 @@ function getEdit(PDO $db, string $editChoice){
  */
 function pasteEdit(array $getEdit) : string {
     $editPopulate = '';
-    if (is_string($getEdit['paragraph']) &&array_key_exists('paragraph', $getEdit)) {
+    if (array_key_exists('paragraph', $getEdit)) {
         $editPopulate .= $getEdit['paragraph'];
     } else {
         $editPopulate .= '';
@@ -126,7 +126,7 @@ function pasteEdit(array $getEdit) : string {
  *
  * @param PDO $db calls the database from the db_query because this function requires it
  *
- * @param $editChoice string outputs a number of the id that will be used by the WHERE in MySQL
+ * @param $submitChoice string outputs a number of the id that will be used by the WHERE in MySQL
  *
  * @param $newParagraph string is a variable that gets the text that was submitted in the 'edit paragraph' text area
  *
@@ -146,15 +146,9 @@ function editParagraph(PDO $db, string $submitChoice, string $newParagraph) : bo
     }
 
 
-function submitButton(){
-    if (isset($_POST['edit'])){
-        echo '<input type="submit" name="submit" value="Submit">';
-    }
-}
 
 
-
-//to either pete or kate, dont review what is below here just yet. its for the delete
+//to everyone! this is a shady beer , dont review what is below here just yet. its for the delete
 
 function deleteParagraph($db, $deleteChoice){
     $query = $db->prepare("UPDATE `about_me` SET `deleted`= '1' WHERE `id`= :deleteChoice;");
