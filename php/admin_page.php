@@ -38,6 +38,7 @@ if (isset($_POST['submit'])){
 if (isset($_POST['delete'])){
     $deleteChoice = $_POST['deleteSelect'];
     deleteParagraph($db, $deleteChoice);
+    header('Location: admin_page.php');
 }
 
 ?>
