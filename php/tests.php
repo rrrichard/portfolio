@@ -6,28 +6,32 @@ use PHPUnit\Framework\Testcase;
 
 class FunctionTest extends Testcase
 {
-    public function testAddParagraphsSuccess(){
+    public function testAddParagraphsSuccess()
+    {
         $expected = '<p>Hello World</p>';
-        $input = [['paragraph'=>'Hello World']];
+        $input = [['paragraph' => 'Hello World']];
         $case = addParagraphs($input);
         $this->assertEquals($expected, $case);
     }
 
-    public function testAddParagraphsFailure(){
+    public function testAddParagraphsFailure()
+    {
         $expected = '<p></p>';
         $input = [['paragraph' => '']];
         $case = addParagraphs($input);
-        $this->assertEquals($expected,$case);
+        $this->assertEquals($expected, $case);
     }
 
-    public function testAddParagraphsFailure2(){
+    public function testAddParagraphsFailure2()
+    {
         $expected = '';
         $input = [['paragraph' => []]];
         $case = addParagraphs($input);
         $this->assertEquals($expected, $case);
     }
 
-    public function testAddParagraphsFailure3(){
+    public function testAddParagraphsFailure3()
+    {
         $expected = '';
         $input = [['awesome' => []]];
         $case = addParagraphs($input);
@@ -35,64 +39,74 @@ class FunctionTest extends Testcase
     }
 
 
-    public function testAddParagraphsMalformed(){
+    public function testAddParagraphsMalformed()
+    {
         $input = 3;
         $this->expectException(TypeError::class);
         addParagraphs($input);
     }
 
 
-    public function testEditParagraphDropdownSuccess(){
+    public function testEditParagraphDropdownSuccess()
+    {
         $expected = '<option value=>paragraph 1 Hello World</option>';
-        $input = [['paragraph'=>'Hello World']];
+        $input = [['paragraph' => 'Hello World']];
         $case = editParagraphDropdown($input);
         $this->assertEquals($expected, $case);
     }
 
-    public function testEditParagraphDropdownFailure(){
+    public function testEditParagraphDropdownFailure()
+    {
         $expected = '';
         $input = [['paragraph' => []]];
         $case = editParagraphDropdown($input);
         $this->assertEquals($expected, $case);
     }
 
-    public function testEditParagraphDropdownFailure2(){
+    public function testEditParagraphDropdownFailure2()
+    {
         $expected = '';
         $input = [['awesome' => []]];
         $case = editParagraphDropdown($input);
         $this->assertEquals($expected, $case);
     }
 
-    public function testEditParagraphDropdownMalformed(){
+    public function testEditParagraphDropdownMalformed()
+    {
         $input = 3;
         $this->expectException(TypeError::class);
         editParagraphDropdown($input);
     }
 
-    public function testPasteEditSuccess(){
-        $expected = '';
-        $input = [['paragraph'=>'Hello World']];
+    public function testPasteEditSuccess()
+    {
+        $expected = 'Hello World';
+        $input = ['paragraph' => 'Hello World'];
         $case = pasteEdit($input);
         $this->assertEquals($expected, $case);
     }
 
-    public function testPasteEditFailure(){
+    public function testPasteEditFailure()
+    {
         $expected = '';
         $input = [['paragraph' => []]];
         $case = pasteEdit($input);
         $this->assertEquals($expected, $case);
     }
 
-    public function testPasteEditFailure2(){
+    public function testPasteEditFailure2()
+    {
         $expected = '';
         $input = [['awesome' => []]];
         $case = pasteEdit($input);
         $this->assertEquals($expected, $case);
     }
 
-    public function testPasteEditFailureMalformed(){
+    public function testPasteEditFailureMalformed()
+    {
         $input = 3;
         $this->expectException(TypeError::class);
         pasteEdit($input);
     }
+
 }
