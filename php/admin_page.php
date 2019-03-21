@@ -88,7 +88,11 @@ if (isset($_POST['delete'])){
                 }
                 ?>
                 <div class="submit_buttons">
-                    <?php echo $submitButton ?>
+                    <?php
+                    if (isset($submitButton)) {
+                        echo $submitButton;
+                    }
+                    ?>
                 </div>
             </form>
         </div>
