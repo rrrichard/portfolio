@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin-top: 25%;
+}
+
+.logIn {
+    height: 100%;
+}
+
+.inputBoxes {
+    width: 200px;
+
+}
+
+form {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input{
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
