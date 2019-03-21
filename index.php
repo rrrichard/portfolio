@@ -1,3 +1,13 @@
+<?php
+require_once 'php/functions.php';
+require_once 'db/db_query.php';
+
+$db = getDbConnection();
+$paragraphs = addAboutMe($db);
+$paragraphResult = addParagraphs($paragraphs);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,8 +64,7 @@
         <a name="about"></a>
         <div>
             <h2>ABOUT ME</h2>
-            <p>My name is Richard and I am aspiring to become a full stack developer. I am currently studying at the Mayden Academy in Bath and have been recently certified as a Scrum Master.</p>
-            <p>In addition to my growing web development skills, I have a Bachelor of Arts degree in Architecture and have been working as an Architectural Technician for the last 3 years. During that time I have acquired skills that are similar in nature to being a developer as well as soft skills that makes me an excellent addition to a team. In my free time, I enjoy photography, cooking and creating digital artworks using architectural software.</p>
+            <?php echo $paragraphResult; ?>
         </div>
     </section>
     <footer class="footer">
