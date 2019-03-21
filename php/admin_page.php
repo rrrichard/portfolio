@@ -40,8 +40,6 @@ if (isset($_POST['delete'])){
     deleteParagraph($db, $deleteChoice);
 }
 
-
-var_dump($submitChoice);
 ?>
 
 <!DOCTYPE html>
