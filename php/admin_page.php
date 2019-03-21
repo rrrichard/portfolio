@@ -1,10 +1,16 @@
 <?php
+session_start();
+
 require_once 'functions.php';
 require_once '../db/db_query.php';
 
 $db = getDbConnection();
 $paragraphs = addAboutMe($db);
 $editDropdownResults = editParagraphDropdown($paragraphs);
+
+if ($_SESSION == false){
+    header('Location: log_in.php');
+}
 
 if (isset($_POST['add_form'])){
     $addSubmit = $_POST['add_form'];
@@ -112,6 +118,6 @@ if (isset($_POST['delete'])){
             </form>
         </div>
     </div>
-
+    Temporary link, click <a href="admin_page.php">here</a> if you want to go back to login.
 </body>
 </html>
