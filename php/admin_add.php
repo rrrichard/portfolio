@@ -1,8 +1,6 @@
 <?php
-
 require_once 'functions.php';
 require_once '../db/db_query.php';
-
 
 $db = getDbConnection();
 
