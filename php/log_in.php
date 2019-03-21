@@ -13,7 +13,7 @@
     <div class="logIn">
         <form method="post" action="log_in_verify.php">
             <input class="inputBoxes" type="text" name="username" placeholder="username">
-            <input class="inputBoxes" type="text" name="password" placeholder="password">
+            <input class="inputBoxes" type="password" name="password" placeholder="password">
             <div>
                 <input type="submit">
             </div>
