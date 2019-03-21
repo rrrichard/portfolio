@@ -1,6 +1,6 @@
 <?php
 
-require_once  'functions.php';
+require_once  '../functions.php';
 
 use PHPUnit\Framework\Testcase;
 
@@ -109,4 +109,10 @@ class FunctionTest extends Testcase
         pasteEdit($input);
     }
 
+    public function testSubmitButtonSuccess()
+    {
+        $expected = '<input type="submit" name="submit" value="Submit">';
+        $case = submitButton();
+        $this->assertEquals($expected, $case);
+    }
 }
