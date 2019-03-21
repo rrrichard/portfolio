@@ -7,9 +7,11 @@ $newParagraph = $_POST['edit_form'];
 $addSubmit = $_POST['add_form'];
 $paragraphs = addAboutMe($db);
 $editDropdownResults = editParagraphDropdown($paragraphs);
-
+$submitButton = '';
 
 if (isset($_POST['edit'])){
+//    $submitButton = submitButton();
+    $submitButton = '<input type="submit" name="submit" value="Submit">';
     $editChoice = $_POST['editSelect'];
     $getEdit = getEdit($db, $editChoice);
     $pasteEdit = pasteEdit($getEdit);
@@ -27,6 +29,8 @@ if (isset($_POST['delete'])){
     deleteParagraph($db, $deleteChoice);
     header('Location: admin_page.php');
 }
+
+var_dump($submitButton);
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +81,7 @@ if (isset($_POST['delete'])){
                 }
                 ?>
                 <div class="submit_buttons">
-                    <?php $submitButton = submitButton(); ?>
+                    <?php echo $submitButton ?>
                 </div>
             </form>
         </div>
