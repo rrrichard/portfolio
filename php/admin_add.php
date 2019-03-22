@@ -3,8 +3,9 @@ require_once 'functions.php';
 require_once '../db/db_query.php';
 
 $db = getDbConnection();
+session_start();
 
-if ($_SESSION == false){
+if ($_SESSION['valid'] == false){
     header('Location: log_in.php');
 }
 
