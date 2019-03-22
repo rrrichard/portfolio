@@ -141,21 +141,14 @@ function submitButton() : string {
 }
 
 /**
- * this function checks the database if the username and password exists
+ * this function gets the username and password from the database
  *
- * @param $db PDO calls the database from the db_query because this function requires it
+ * @param PDO $db calls the database from the db_query because this function requires it
  *
- * @param $postUsername string passes the user input of username to the database
- *
- * @param $postPassword string passes the user input of password to the database
- *
- * @return mixed will return true if the id and password exists together in one row in the database and will return false if not
+ * @return array of [['username'=>'password']], which will be needed for the password_verify
  */
-function usernameVerify(PDO $db, string $postUsername, string $postPassword) {
-    $query = $db->prepare("SELECT `id` FROM `accounts` WHERE `username` = :postUsername AND `password` = :postPassword");
-    $query->bindParam(':postUsername', $postUsername);
-    $query->bindParam(':postPassword', $postPassword);
+function getDetails(PDO $db) : array {
+    $query = $db->prepare("SELECT `username`,`password` FROM `accounts`;");
     $query->execute();
     return $query->fetch();
 }
-
