@@ -78,6 +78,7 @@ $paragraphResult = addParagraphs($paragraphs);
         <div>
             <a href="#top" class="backUp">Back to Top</a>
         </div>
+
         <div class="container">
             <div class="logoContainer">
                 <a href="https://github.com/rrrichard" target="_blank">
@@ -91,6 +92,9 @@ $paragraphResult = addParagraphs($paragraphs);
                 </a>
                 <a href="https://www.instagram.com/totallynotrichard/" target="_blank">
                     <img src="images/instagram.svg" alt="instagram logo">
+                </a>
+                <a href="php/admin_page.php" target="_blank">
+                    <img src="images/admin.svg" alt="admin logo">
                 </a>
             </div>
         </div>

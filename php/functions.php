@@ -140,4 +140,15 @@ function submitButton() : string {
     return '<input type="submit" name="submit" value="Submit">';
 }
 
-
+/**
+ * this function gets the username and password from the database
+ *
+ * @param PDO $db calls the database from the db_query because this function requires it
+ *
+ * @return array of [['username'=>'password']], which will be needed for the password_verify
+ */
+function getDetails(PDO $db) : array {
+    $query = $db->prepare("SELECT `username`,`password` FROM `accounts`;");
+    $query->execute();
+    return $query->fetch();
+}

@@ -1,10 +1,13 @@
 <?php
-
 require_once 'functions.php';
 require_once '../db/db_query.php';
 
-
 $db = getDbConnection();
+session_start();
+
+if ($_SESSION['valid'] == false){
+    header('Location: log_in.php');
+}
 
 if (isset($_POST['add_form'])){
     $addSubmit = $_POST['add_form'];
