@@ -1,9 +1,19 @@
 <?php
 require_once 'log_in_verify.php';
 
-if ($_SESSION == true){
+if ($_SESSION['valid'] == true){
     header('Location: admin_page.php');
 }
+
+if (isset($_POST['logout'])){
+    $_SESSION['valid'] = false;
+    session_unset();
+    header('Location: log_in.php');
+    exit;
+
+}
+
+
 
 ?>
 
