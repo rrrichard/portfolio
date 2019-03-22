@@ -8,6 +8,10 @@ $db = getDbConnection();
 $paragraphs = addAboutMe($db);
 $editDropdownResults = editParagraphDropdown($paragraphs);
 
+if (isset($_POST['logout'])){
+    header('Location: log_in.php');
+}
+
 if ($_SESSION == false){
     header('Location: log_in.php');
 }
@@ -60,7 +64,7 @@ if (isset($_POST['delete'])){
 <body>
     <div class="mainText container">
             <h4>Welcome</h4>
-            <h2>RICHARD</h2>
+        <h2><a href="../index.php">RICHARD</a></h2>
             <h3>'ABOUT ME'</h3>
     </div>
     <div class="forms container">
@@ -118,6 +122,8 @@ if (isset($_POST['delete'])){
             </form>
         </div>
     </div>
-    Temporary link, click <a href="admin_page.php">here</a> if you want to go back to login.
+    <form method="post" action="log_in.php">
+        <input type="submit" name="logout" class="logout" value="logout">
+    </form>
 </body>
 </html>
