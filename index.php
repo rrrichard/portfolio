@@ -40,11 +40,13 @@ $paragraphResult = addParagraphs($paragraphs);
                 <h4>PROJECT 1</h4>
                 <p>APTITUDE TEST</p>
                 <a class="codeLink" href="http://bit.ly/MaydenAptitudeTest" target="_blank">CODE</a>
+                <a class="codeLink" href="https://dev.maydenacademy.co.uk/projects/2017/aptitude-test/app/" target="_blank">DEMO</a>
             </div>
             <div class="projectBox project2">
                 <h4>PROJECT 2</h4>
                 <p>SOLAR SYSTEM</p>
                 <a class="codeLink" href="http://bit.ly/solarRR" target="_blank">CODE</a>
+                <a class="codeLink" href="http://bit.ly/solarSystemCodePen" target="_blank">DEMO</a>
             </div>
             <div class="projectBox project3">
                 <h4>PROJECT 3</h4>
@@ -54,12 +56,12 @@ $paragraphResult = addParagraphs($paragraphs);
             <div class="projectBox project4">
                 <h4>PROJECT 4</h4>
                 <p>SPEED TYPE GAME</p>
-                <a class="codeLink" href="http://bit.ly/cmsPortfolio" target="_blank">CODE</a>
+                <a class="codeLink" href="http://bit.ly/speedTypeGameGit" target="_blank">CODE</a>
             </div>
             <div class="projectBox project5">
                 <h4>PROJECT 5</h4>
                 <p>PAINTMASTER 3000</p>
-                <a class="codeLink" href="http://bit.ly/MaydenAptitudeTest" target="_blank">CODE</a>
+                <a class="codeLink" href="http://bit.ly/paintAppGit" target="_blank">CODE</a>
                 <a class="codeLink" href="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/" target="_blank">DEMO</a>
             </div>
             <div class="projectBox project6">
