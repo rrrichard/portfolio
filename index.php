@@ -36,27 +36,37 @@ $paragraphResult = addParagraphs($paragraphs);
         <a id="feature" name="feature"></a>
         <div>
             <h3>PORTFOLIO</h3>
-            <div class="projectBox project1 projectDone">
-                <h3>PROJECT 1</h3>
+            <div class="projectBox project1">
+                <h4>PROJECT 1</h4>
+                <p>APTITUDE TEST</p>
+                <a class="codeLink" href="http://bit.ly/MaydenAptitudeTest" target="_blank">CODE</a>
             </div>
-            <div class="projectBox project2 projectDone">
-                <h3>PROJECT 2</h3>
+            <div class="projectBox project2">
+                <h4>PROJECT 2</h4>
+                <p>SOLAR SYSTEM</p>
+                <a class="codeLink" href="http://bit.ly/solarRR" target="_blank">CODE</a>
             </div>
             <div class="projectBox project3">
                 <h4>PROJECT 3</h4>
-                <p>UNDER CONSTRUCTION</p>
+                <p>CONTENT MANAGEMENT SYSTEM</p>
+                <a class="codeLink" href="http://bit.ly/cmsPortfolio" target="_blank">CODE</a>
             </div>
             <div class="projectBox project4">
                 <h4>PROJECT 4</h4>
-                <p>UNDER CONSTRUCTION</p>
+                <p>SPEED TYPE GAME</p>
+                <a class="codeLink" href="http://bit.ly/cmsPortfolio" target="_blank">CODE</a>
             </div>
             <div class="projectBox project5">
                 <h4>PROJECT 5</h4>
-                <p>UNDER CONSTRUCTION</p>
+                <p>PAINTMASTER 3000</p>
+                <a class="codeLink" href="http://bit.ly/MaydenAptitudeTest" target="_blank">CODE</a>
+                <a class="codeLink" href="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/" target="_blank">DEMO</a>
             </div>
             <div class="projectBox project6">
                 <h4>PROJECT 6</h4>
-                <p>UNDER CONSTRUCTION</p>
+                <p>TOP DOG APP</p>
+                <a class="codeLink" href="http://bit.ly/topDogAppGit" target="_blank">CODE</a>
+                <a class="codeLink" href="http://bit.ly/topDogApp" target="_blank">DEMO</a>
             </div>
         </div>
     </section>

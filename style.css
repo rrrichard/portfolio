@@ -124,40 +124,59 @@ header li a {
     width: 33.3%;
     height: 330px;
     float: left;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    opacity: 0.5;
+    text-shadow: -1px -1px 0 #272727, 1px -1px 0 #272727, -1px 1px 0 #272727, 1px 1px 0 #272727;
+    opacity: 0.8;
     transition: all 0.3s;
+    background-repeat: no-repeat;
 }
 
+.codeLink {
+    padding: 5px;
+    /*border: 1px solid #565254;*/
+    background-color: transparent;
+    letter-spacing: 5px;
+    display: none;
+    color: #666;
+}
 .projectBox h4 {
     font-size: 48px;
     letter-spacing: 5px;
-    padding-top: 5%;
-    color: #FFFFFF;
+    /*padding-top: 5%;*/
+    color: #7a7a7aba;
     display: none;
 }
 
 .projectBox h3 {
     font-size: 48px;
     letter-spacing: 5px;
-    color: #FFFFFF;
+    color: #7a7a7aba;
     display: none;
     font-weight: bold;
     padding-top: 15%;
 }
 
 .projectBox P {
-    font-size: 24px;
-    letter-spacing: 2px;
+    font-size: 28px;
+    letter-spacing: 3px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #7a7a7aba;
     display: none;
 }
 
 .projectBox:hover {
     opacity: 1;
-    transform: scale(0.9);
+    transform: scale(0.98);
 }
+
+.projectBox:hover a {
+    display: inline-block;
+    color: #7a7a7aba;
+}
+.projectBox .codeLink:hover {
+    border: 1px solid #565254;
+    color: white;
+}
+
 .projectBox:hover h3 {
     display: block;
 }
@@ -171,7 +190,11 @@ header li a {
 }
 
 .projectBox a:visited {
-    color: #FFFFFF;
+    color: #7A7A7A;
+    /*text-decoration: none;*/
+}
+
+.projectBox a, u{
     text-decoration: none;
 }
 
@@ -179,38 +202,56 @@ header li a {
     margin-top: 35%;
 }
 .project1 {
-    background-image: url("images/pilotshop.png");
+    background-image: url("images/aptitudeTest.png");
     background-size: cover;
     background-position: center;
 }
 
+
 .project2 {
-    background-image: url("images/maydenlogo.png");
-    background-size: contain;
+    background-image: url("images/solar.jpg");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.project2:hover{
+    background-image: url("images/solar.gif");
+}
+
 .project3 {
-    background-image: url("images/workprogress1.jpg");
+    background-image: url("images/cms.jpg");
     background-size: cover;
     background-position: center;
 }
 
+.project3:hover{
+    background-image: url("images/cms.gif");
+}
+
 .project4 {
-    background-image: url("images/workprogress2.jpg");
+    background-image: url("images/speedtype.jpg");
     background-size: cover;
     background-position: center;
 }
+
+.project4:hover {
+    background-image: url("images/speedtype.gif");
+}
+
 .project5 {
-    background-image: url("images/workprogress3.jpg");
+    background-image: url("images/paint.png");
     background-size: cover;
     background-position: center;
 }
 .project6 {
-    background-image: url("images/workprogress4.jpg");
+    background-image: url("images/topDog.jpg");
     background-size: cover;
     background-position: center;
+}
+
+.project6:hover {
+    background-image: url("images/topDog.gif");
 }
 
 /*ABOUT ME*/
@@ -316,10 +357,10 @@ footer a:visited {
 /*!*MEDIA QUERIES*! MARK*/
 
 @media only screen and (max-width:500px) {
-    section .projectBox{
-        width: 100%;
-        height: 300px;
-    }
+    /*section .projectBox{*/
+        /*width: 100%;*/
+        /*height: 300px;*/
+    /*}*/
     .navBar li {
         font-size: 14px;
         padding: 0;
@@ -349,6 +390,12 @@ footer a:visited {
 }
 
 @media only screen and (max-width:768px) {
+
+    section .projectBox{
+        width: 100%;
+        height: 300px;
+    }
+
     .navBar li a {
         font-size: 14px;
         margin: 0 20px;
