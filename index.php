@@ -21,11 +21,11 @@ $paragraphResult = addParagraphs($paragraphs);
     <header class="navBar featureImage">
         <div class="container">
                 <ul>
-                    <li><a href="#top" class="navDefault">HOME</a></li>
+<!--                    <li><a href="#top" class="navDefault">HOME</a></li>-->
                     <li><a href="#about">ABOUT ME</a></li>
                     <li><a href="#feature">PORTFOLIO</a></li>
                     <li><a href="#footer">CONTACT</a></li>
-                    <li><a href="#top" class="navHidden">HOME</a></li>
+<!--                    <li><a href="#top" class="navHidden">HOME</a></li>-->
                 </ul>
             <h1>RICHARD RABULAN</h1>
             <p>Web Developer</p>
