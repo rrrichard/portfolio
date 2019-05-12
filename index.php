@@ -35,7 +35,7 @@ $paragraphResult = addParagraphs($paragraphs);
     <section class="portfolio">
         <a id="feature" name="feature"></a>
         <div>
-            <h3>PORTFOLIO</h3>
+            <h3>MAIN PROJECTS</h3>
             <div class="projectBox project1">
                 <h4>PROJECT 1</h4>
                 <p>APTITUDE TEST</p>
@@ -60,50 +60,51 @@ $paragraphResult = addParagraphs($paragraphs);
             </div>
             <div class="projectBox project5">
                 <h4>PROJECT 5</h4>
-                <p>PAINTMASTER 3000</p>
-                <a class="codeLink" href="http://bit.ly/paintAppGit" target="_blank">CODE</a>
-                <a class="codeLink" href="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/" target="_blank">DEMO</a>
-            </div>
-            <div class="projectBox project6">
-                <h4>PROJECT 6</h4>
                 <p>TOP DOG APP</p>
                 <a class="codeLink" href="http://bit.ly/topDogAppGit" target="_blank">CODE</a>
                 <a class="codeLink" href="http://bit.ly/topDogApp" target="_blank">DEMO</a>
             </div>
+            <div class="projectBox project6">
+                <h4>PROJECT 6</h4>
+                <p>PAINTMASTER 3000</p>
+                <a class="codeLink" href="http://bit.ly/paintAppGit" target="_blank">CODE</a>
+                <a class="codeLink" href="https://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/" target="_blank">DEMO</a>
+            </div>
+
         </div>
     </section>
     <section class="boxes">
-        <h3>SMALL CHALLENGES</h3>
+        <h3>PRACTICE PROJECTS</h3>
         <div class="container">
             <div class="box">
-                <img src="images/pilot.svg" alt="creditToFreePik">
-                <h3>PILOT SHOP</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+                <a href="http://bit.ly/pilotshop" target="_blank"><img src="images/pilot.svg" alt="creditToFreePik"></a>
+                <h4>PILOT SHOP</h4>
+                <p>HTML & CSS</p>
             </div>
             <div class="box">
-                <img src="images/to-do.svg" alt="creditToSmashicons">
-                <h3>To Do List</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+                <a href="http://bit.ly/pilotshop" target="_blank"><img src="images/to-do.svg" alt="creditToSmashicons"></a>
+                <h4>To Do List</h4>
+                <p>PHP with SLIM Framework</p>
             </div>
             <div class="box">
-                <img src="images/form.svg" alt="creditToFreePik">
-                <h3>Javascript Form Validator</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+                <a href="http://bit.ly/JSFormValidator" target="_blank"><img src="images/form.svg" alt="creditToFreePik"></a>
+                <h4>Javascript Form Validator</h4>
+                <p>HTML, CSS & Javascript</p>
             </div>
             <div class="box">
-                <img src="images/fence.svg" alt="creditToFreePik">
-                <h3>Post and Rails</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+                <a href="http://bit.ly/pilotshop" target="_blank"><img src="images/fence.svg" alt="creditToFreePik"></a>
+                <h4>Post and Rails</h4>
+                <p>PHP</p>
             </div>
             <div class="box">
-                <img src="images/podium.svg" alt="creditToFreePik">
-                <h3>Top 3 Github Users</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+                <a href="http://bit.ly/top3SG" target="_blank"><img src="images/podium.svg" alt="creditToFreePik"></a>
+                <h4>Top 3 Github Users</h4>
+                <p>API Call with Javascript</p>
             </div>
             <div class="box">
-                <img src="images/dots.svg" alt="creditToFreePik">
-                <h3>Dots Game</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+                <a href="http://bit.ly/JSDotGame" target="_blank"><img src="images/dots.svg" alt="creditToFreePik"></a>
+                <h4>Dots Game</h4>
+                <p>Javascript Event Listeners</p>
             </div>
         </div>
     </section>

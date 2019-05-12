@@ -234,27 +234,35 @@ header li a {
 .project4:hover {
     background-image: url("images/speedtype.gif");
 }
-
 .project5 {
-    background-image: url("images/paint.png");
-    background-size: cover;
-    background-position: center;
-}
-.project6 {
     background-image: url("images/topDog.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.project6:hover {
+.project5:hover {
     background-image: url("images/topDog.gif");
 }
 
+.project6 {
+    background-image: url("images/paint.png");
+    background-size: cover;
+    background-position: center;
+}
 
 /*ADDITIONAL PROJECTS*/
 
+.boxes h3 {
+    text-align: center;
+    letter-spacing: 6px;
+    font-size: 48px;
+    color: #565254;
+    font-weight: normal;
+}
+
 .boxes{
     margin-top:20px;
+    color: #565254;
 }
 
 .boxes .box{
@@ -270,12 +278,13 @@ header li a {
     opacity: 0.7;
 }
 
-.boxes .box h3 {
+.boxes .box h4 {
     border: 1px solid transparent;
     padding: 5px;
+    font-size: 20px;
 }
 
-.boxes .box h3:hover {
+.boxes .box h4:hover {
     border: 1px solid #565254;
     cursor: pointer;
 }
