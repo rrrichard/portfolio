@@ -72,6 +72,41 @@ $paragraphResult = addParagraphs($paragraphs);
             </div>
         </div>
     </section>
+    <section class="boxes">
+        <h3>SMALL CHALLENGES</h3>
+        <div class="container">
+            <div class="box">
+                <img src="images/pilot.svg" alt="creditToFreePik">
+                <h3>PILOT SHOP</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+            </div>
+            <div class="box">
+                <img src="images/to-do.svg" alt="creditToSmashicons">
+                <h3>To Do List</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+            </div>
+            <div class="box">
+                <img src="images/form.svg" alt="creditToFreePik">
+                <h3>Javascript Form Validator</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+            </div>
+            <div class="box">
+                <img src="images/fence.svg" alt="creditToFreePik">
+                <h3>Post and Rails</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+            </div>
+            <div class="box">
+                <img src="images/podium.svg" alt="creditToFreePik">
+                <h3>Top 3 Github Users</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+            </div>
+            <div class="box">
+                <img src="images/dots.svg" alt="creditToFreePik">
+                <h3>Dots Game</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+            </div>
+        </div>
+    </section>
     <section class="aboutMe container">
         <a name="about"></a>
         <div>
