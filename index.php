@@ -50,7 +50,7 @@ $paragraphResult = addParagraphs($paragraphs);
             </div>
             <div class="projectBox project3">
                 <h4>PROJECT 3</h4>
-                <p>CONTENT MANAGEMENT SYSTEM</p>
+                <p>CMS BUILD</p>
                 <a class="codeLink" href="http://bit.ly/cmsPortfolio" target="_blank">CODE</a>
             </div>
             <div class="projectBox project4">
@@ -78,7 +78,7 @@ $paragraphResult = addParagraphs($paragraphs);
         <div class="container">
             <div class="box">
                 <a href="http://bit.ly/pilotshop" target="_blank"><img src="images/pilot.svg" alt="creditToFreePik"></a>
-                <h4>PILOT SHOP</h4>
+                <a href="https://codepen.io/rrrichard/pen/gJMJwJ" target="_blank"><h4>PILOT SHOP</h4></a>
                 <p>HTML & CSS</p>
             </div>
             <div class="box">
@@ -88,22 +88,22 @@ $paragraphResult = addParagraphs($paragraphs);
             </div>
             <div class="box">
                 <a href="http://bit.ly/JSFormValidator" target="_blank"><img src="images/form.svg" alt="creditToFreePik"></a>
-                <h4>Javascript Form Validator</h4>
+                <a href="https://codepen.io/rrrichard/pen/vwKMpd" target="_blank"><h4>Javascript Form Validator</h4></a>
                 <p>HTML, CSS & Javascript</p>
             </div>
             <div class="box">
-                <a href="http://bit.ly/pilotshop" target="_blank"><img src="images/fence.svg" alt="creditToFreePik"></a>
-                <h4>Post and Rails</h4>
+                <a href="https://github.com/rrrichard/post-railsChallenge/tree/master" target="_blank"><img src="images/fence.svg" alt="creditToFreePik"></a>
+                <a href="https://github.com/rrrichard/post-railsChallenge/tree/master" target="_blank"><h4>Post and Rails</h4></a>
                 <p>PHP</p>
             </div>
             <div class="box">
                 <a href="http://bit.ly/top3SG" target="_blank"><img src="images/podium.svg" alt="creditToFreePik"></a>
-                <h4>Top 3 Github Users</h4>
+                <a href="https://codepen.io/rrrichard/pen/zQBXmo" target="_blank"><h4>Top 3 Github Users</h4></a>
                 <p>API Call with Javascript</p>
             </div>
             <div class="box">
                 <a href="http://bit.ly/JSDotGame" target="_blank"><img src="images/dots.svg" alt="creditToFreePik"></a>
-                <h4>Dots Game</h4>
+                <a href="https://codepen.io/rrrichard/pen/VOjNMM" target="_blank"><h4>Dots Game</h4></a>
                 <p>Javascript Event Listeners</p>
             </div>
         </div>

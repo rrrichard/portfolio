@@ -132,20 +132,20 @@ header li a {
     background-color: transparent;
     letter-spacing: 5px;
     display: none;
-    color: #666;
+    color: #b62f32;
 }
 .projectBox h4 {
     font-size: 48px;
     letter-spacing: 5px;
     /*padding-top: 5%;*/
-    color: #7a7a7aba;
+    color: #b62f32;
     display: none;
 }
 
 .projectBox h3 {
     font-size: 48px;
     letter-spacing: 5px;
-    color: #7a7a7aba;
+    color: #b62f32;
     display: none;
     font-weight: bold;
     padding-top: 15%;
@@ -155,7 +155,7 @@ header li a {
     font-size: 28px;
     letter-spacing: 3px;
     font-weight: bold;
-    color: #7a7a7aba;
+    color: #b62f32;
     display: none;
 }
 
@@ -186,7 +186,7 @@ header li a {
 }
 
 .projectBox a:visited {
-    color: #7A7A7A;
+    color: #b62f32;
     /*text-decoration: none;*/
 }
 
@@ -297,6 +297,15 @@ header li a {
     opacity: 1;
 }
 
+.box a{
+    color: #565254;
+    text-decoration: none;
+}
+
+.box a:visited{
+    color: #565254;
+    text-decoration: none;
+}
 /*ABOUT ME*/
 
 .aboutMe {
