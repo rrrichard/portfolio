@@ -38,6 +38,7 @@ header li a {
     margin: 10px;
     border: 2px solid transparent;
 }
+
 .narBar .more {
     border: 2px solid black;
 }
@@ -88,6 +89,10 @@ header li a {
     padding: 5px 10px 5px 15px;
 }
 
+.featureImage .more{
+    color: #FFFBFE;
+}
+
 .featureImage .more:hover {
     border: 2px solid #FFFBFE;
 }
@@ -134,6 +139,11 @@ header li a {
     display: none;
     color: #b62f32;
 }
+
+.codeLink a{
+    color: #b62f32;
+}
+
 .projectBox h4 {
     font-size: 48px;
     letter-spacing: 5px;
@@ -166,8 +176,9 @@ header li a {
 
 .projectBox:hover a {
     display: inline-block;
-    color: #7a7a7aba;
+    color: #b62f32;
 }
+
 .projectBox .codeLink:hover {
     border: 1px solid #565254;
     color: white;
@@ -194,15 +205,19 @@ header li a {
     text-decoration: none;
 }
 
+.projectBox a {
+    color: #b62f32;
+}
+
 .projectBox .projectDone h4 {
     margin-top: 35%;
 }
+
 .project1 {
     background-image: url("images/aptitudeTest.png");
     background-size: cover;
     background-position: center;
 }
-
 
 .project2 {
     background-image: url("images/solar.jpg");
@@ -234,6 +249,7 @@ header li a {
 .project4:hover {
     background-image: url("images/speedtype.gif");
 }
+
 .project5 {
     background-image: url("images/topDog.jpg");
     background-size: cover;
@@ -432,19 +448,29 @@ footer a:visited {
         font-size: 24px;
         letter-spacing: 2px;
         font-weight: bold;
-        color: #FFFFFF;
+        /*color: #FFFFFF;*/
         display: none;
     }
 
    footer {
        height: 300px
    }
+
+    .boxes .box{
+        width:100%;
+        height: 300px;
+    }
 }
 
 @media only screen and (max-width:768px) {
 
     section .projectBox{
         width: 100%;
+        height: 300px;
+    }
+
+    .boxes .box{
+        width:100%;
         height: 300px;
     }
 
@@ -509,6 +535,10 @@ footer a:visited {
 
     .projectBox h4 {
         margin-bottom: 0;
+    }
+
+    .boxes .box{
+        width:50%;
     }
 
     footer {

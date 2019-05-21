@@ -57,6 +57,7 @@ $paragraphResult = addParagraphs($paragraphs);
                 <h4>PROJECT 4</h4>
                 <p>SPEED TYPE GAME</p>
                 <a class="codeLink" href="http://bit.ly/speedTypeGameGit" target="_blank">CODE</a>
+                <a class="codeLink" href="http://bit.ly/speedJSTyper" target="_blank">DEMO</a>
             </div>
             <div class="projectBox project5">
                 <h4>PROJECT 5</h4>
@@ -81,10 +82,16 @@ $paragraphResult = addParagraphs($paragraphs);
                 <a href="https://codepen.io/rrrichard/pen/gJMJwJ" target="_blank"><h4>PILOT SHOP</h4></a>
                 <p>HTML & CSS</p>
             </div>
+<!--            Encountered problems with toDoApp, will reinstate when fixed-->
+<!--            <div class="box">-->
+<!--                <a href="#" target="_blank"><img src="images/to-do.svg" alt="creditToSmashicons"></a>-->
+<!--                <h4>To Do List</h4>-->
+<!--                <p>PHP with SLIM Framework</p>-->
+<!--            </div>-->
             <div class="box">
-                <a href="http://bit.ly/pilotshop" target="_blank"><img src="images/to-do.svg" alt="creditToSmashicons"></a>
-                <h4>To Do List</h4>
-                <p>PHP with SLIM Framework</p>
+                <a href="https://dev.maydenacademy.co.uk/students/2019/feb/richard/carouselChallenge/" target="_blank"><img src="images/gallery.svg" alt="creditToKiranshastry"></a>
+                <a href="https://codepen.io/rrrichard/pen/WBoGgL" target="_blank"><h4>Simple Slider</h4></a>
+                <p>HTML, CSS & Javascript</p>
             </div>
             <div class="box">
                 <a href="http://bit.ly/JSFormValidator" target="_blank"><img src="images/form.svg" alt="creditToFreePik"></a>
@@ -119,9 +126,9 @@ $paragraphResult = addParagraphs($paragraphs);
         <a name="footer"></a>
         <section class="contact">
                 <h2>CONTACT ME</h2>
-                <p><a href="tel:07708021930">Phone</a>
+                <p><a href="tel:07494363991">Phone</a>
                 </p>
-                <p><a href="mailto:richard.rabulan@hotmail.co.uk">Email</a></p>
+                <p><a href="mailto:rmrabulan@gmail.com">Email</a></p>
         </section>
         <div>
             <a href="#top" class="backUp">Back to Top</a>
